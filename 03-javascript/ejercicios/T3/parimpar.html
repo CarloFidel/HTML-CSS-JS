@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../T3/stylepropio.css" />
+    <title>Numero par impar con framework esxterno</title>
+  </head>
+  <body>
+    <main class="container-fluid pt-5">
+<!--       <section id="ejercicio01">
+        <h1 class="mb-5">Ejercicos JavaScript 3</h1>
+        <h2>Ejercicio 1</h2>
+        <p>
+          Crea un HTML que amb la funció et demani un número per camp de text i
+          et digui si és parell o impar.
+        </p>
+        <div id="in">
+          <label for="numero" class="form-label">Escriba el numero</label>
+          <input
+            type="text"
+            class="form-control mb-5"
+            id="numero"
+            name="numero"
+            value=""
+          />
+        </div>
+        <div id="error" class="err"></div>
+        <div id="mostra1" role="alert"></div>
+        <div class="botones">
+          <button class="btn btn-primary" id="btn_ejer1">
+            Ejecur ejercicio
+          </button>
+          <button class="btn btn-warning" id="btn_limpiar">
+            Limpiar ejercicio
+          </button>
+        </div>
+      </section>
+ -->      <!-- <section id="ejercicio02">
+        <lebel>Diga el resultado de dividir 144/12</lebel>
+        <input type="text" />
+      </section> -->
+      <section id="ejercicio03">
+        <h2>Ejercicio 03</h2>
+        <div id="precio">
+          <label for="text">Ingrese precio del producto sin IVA</label>
+          <input id="prod" type="text" />
+        </div>
+        <div id="impuesto">
+          <label for="text">Ingrese IVA</label>
+          <input id="iva" type="text" />
+        </div>
+        <div id="apagar">
+          <p id="pagar">0</p>
+        </div>
+        <div id="but">
+          <button id="bor" onclick="calc()">Calcula iva</button>
+          <button id="bor" onclick="volver()">Volver a calcular</button>
+        </div>
+      </section>
+      <section id="ejercicio04">
+        <h2>Ejercicio 04</h2>
+        <br />
+        <br />
+        <div id="uno">
+        <lebel for="text">Introduzca un primer número</lebel>
+        <input type="text" />
+        </div>
+        <div id="dos">
+        <lebel for="text">Introduzca un segundo número</lebel>
+        <input type="text" />
+        </div>
+
+        <p>seleccione la operación deseada</p>
+        <form action="/action_page.php">
+          <div >
+          <label for="cars">Choose a car:</label>
+          <select name="cars" id="cars">
+            <br>
+          </div>
+            <option value="volvo">suma</option>
+            <option value="saab">resta</option>
+            <option value="opel">multiplica</option>
+            <option value="audi">divide</option>
+            <option value="modulo">modulo</option>
+
+          </select>
+          <br />
+        </form>
+      </section>
+    </main>
+    <script src="parimpar.js"></script>
+  </body>
+</html>

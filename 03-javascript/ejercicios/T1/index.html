@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Introducción a JavaScript</h1>
+    </header>
+    <div id="mostrar"></div>
+    <p>
+      <a href="javascript:nombre();">Volver a cargar</a>
+    </p>
+
+    <article>
+      <script type="text/javascript">
+        document.write(
+          "<strong>document.write</strong> nos permite escribir texto o tags HTML"
+        );
+        document.write("<br />");
+        document.write("pero solo mientras se carga la web. ");
+        document.write(
+          "Si lo utilizamos una vez cargada, se borrará todo el contenido HTML"
+        );
+      </script>
+      <noscript
+        >Si se muestra este mensaje, tu navegador no soporta JavaScript.
+      </noscript>
+    </article>
+    <!--     <script src="js/ejercicioIO.js"></script>-->
+    <script src="../../01-variables_y_estructurasdecontrol/js/scripts.js"></script>
+    <script src="../ejercicio_6.html"></script>
+  </body>
+</html>

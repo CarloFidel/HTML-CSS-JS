@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="tit">Cambio de título y color ejercicio 8</title>
+  </head>
+  <body>
+    <h1 id="textblue">Cambio de color para el texto</h1>
+    <h2 id="textblue2">Mirar en consola el ejercicio 9</h2>
+    <button onclick="gris()">Cambiar al color gris</button>
+    <button onclick="blanco()">Cambiar al color blanco</button>
+    <button onclick="textcolor()">
+      cambiar de color el texto del documento
+    </button>
+
+    <button id="nova_finestra" onclick="finestra()">
+      Abre una ventana para el Ejercicio 09
+    </button>
+    <section id="ejerc12">
+      <h2>Ejercicio12</h2>
+      <p>Ingresa un texto:</p>
+      <input id="input" type="text" />
+      <button id="click" onclick="valida()">
+        Mostrar los últimos 5 caracteres
+      </button>
+      <div>
+        <p id="result"></p>
+      </div>
+    </section>
+    <section id="ejerc13">
+      <h2>Ejercicio13</h2>
+      <p>Ingresa un texto:</p>
+      <input id="input13" type="text" />
+      <button id="caracteres" onclick="click13()">Número de caracteres</button>
+      <div>
+        <p id="result13"></p>
+      </div>
+    </section>
+    <section id="ejerc14">
+      <h2>Ejercicio 14</h2>
+      <p>Tabla con bordes colapsados</p>
+      <p id="tab"></p>
+      <div><button id="borrar" onclick="borrar()">Reiniciar Tabla</button></div>
+    </section>
+    <section id="ejerc15">
+      <h2>Ejercicio15 Area de un triángulo</h2>
+      <div id="prim">
+        <p>Ingrese longitud de la base</p>
+        <input id="base" type="text" />
+      </div>
+      <div id="seg">
+        <p>Ingrese altura del triángulo</p>
+        <input id="altura" type="text" />
+      </div>
+      <p></p>
+      <div>
+        <button id="obtener" onclick="ar()">Obtener área</button>
+        <button id="volver" onclick="volver()">Borrar inputs</button>
+      </div>
+    </section>
+    <section id="ejerc16">
+      <h2>Ejercicio 16 Bombilla</h2>
+      <div style="display: none" id="encendida">
+        <img src="./imgs_T2/encendida.gif" alt="" />
+      </div>
+      <div id="apagada">
+        <img src="./imgs_T2/apagada.gif" alt="" />
+      </div>
+      <p></p>
+      <div>
+        <button id="encendido" onclick="encender()">Encender bombilla</button>
+        <button id="apagado" onclick="apagar()">Apagar bombilla</button>
+      </div>
+    </section>
+    <section id="ejerc17">
+      <h2>Ejercicio 17 callendario Maya</h2>
+      <div>
+        <p id="hoy"></p>
+      </div>
+      <div>
+        <p id="maya"></p>
+      </div>
+      <p></p>
+    </section>
+    <section id="ejerc18">
+      <h2>Ejercicio 18</h2>
+      <div>
+        <p id="seg"></p>
+      </div>
+    </section>
+
+    <script src="script08.js"></script>
+  </body>
+</html>
