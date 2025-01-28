@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Añadir elementos con DOM</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../02_uso_frameworks/W3css/source/css/w3css.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      #texto_nuevo,
+      #borrar_nuevos {
+        display: none;
+      }
+
+      .show {
+        display: block !important;
+      }
+
+      .show_button {
+        display: inline-block !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="w3-container">
+      <h2>Clicka sobre el boton para añadir mas elementos a la lista</h2>
+      <ul id="lista" class="w3-ul w3-lime w3-hoverable">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+        <li>Sed mattis enim vitae orci</li>
+        <li>Phasellus libero</li>
+        <li>Maecenas nisl arcu</li>
+      </ul>
+
+      <input type="text" class="" name="texto_nuevo" id="texto_nuevo" />
+
+      <input
+        id="more"
+        type="button"
+        class="w3-button w3-white w3-border"
+        value="Añadir elemento"
+      />
+      <input
+        id="less"
+        type="button"
+        class="w3-button w3-white w3-border"
+        value="Borrar elemento"
+      />
+
+      <button id="borrar_nuevos">Borra nuevoa elementos</button>
+    </div>
+    <script>
+      let cont = 0;
+      const more = document.querySelector("#more");
+      const less = document.querySelector("#less");
+      const texto = document.querySelector("#texto_nuevo");
+      const borrar_nuevos = document.querySelector("#borrar_nuevos");
+      const lista = document.querySelector("#lista");
+
+      // Función para crear un nuevo elemento en la lista
+      const createElement = () => {
+        texto.classList.toggle("show"); // Mostrar u ocultar el campo de texto
+        texto.focus(); // Dar foco al campo de texto
+
+        if (texto.value.length > 0) {
+          console.log(texto_nuevo);
+          let elem = document.createElement("li"); // Crear el elemento <li>
+          let content = document.createTextNode(texto.value); // Tomar el valor de 'texto' y crear un nodo de texto
+          elem.appendChild(content); // Agregar el contenido al <li>
+          lista.appendChild(elem); // Agregar el <li> a la lista
+          texto.value = ""; // Limpiar el campo de texto
+          cont++; // Incrementar el contador
+
+          // Mostrar el botón de borrar solo si hay al menos un elemento
+          if (cont > 0) {
+            borrar_nuevos.classList.add("show_button");
+          }
+        }
+      };
+
+      // Función para borrar el último elemento de la lista
+      const borraHijo = () => {
+        if (cont > 0) {
+          lista.removeChild(lista.lastChild); // Eliminar el último hijo de la lista
+          cont--; // Decrementar el contador
+
+          // Ocultar el botón de borrar si ya no hay elementos
+          if (cont === 0) {
+            borrar_nuevos.classList.remove("show_button");
+          }
+        }
+      };
+
+      // Agregar eventos a los botones
+      less.addEventListener("click", borraHijo);
+      more.addEventListener("click", createElement);
+
+      // Evento para borrar todos los elementos de la lista
+      borrar_nuevos.addEventListener("click", () => {
+        if (cont > 0) {
+          // Eliminar todos los elementos de la lista
+          while (lista.firstChild) {
+            lista.removeChild(lista.firstChild);
+          }
+          cont = 0; // Restablecer el contador
+
+          // Ocultar el botón de borrar
+          borrar_nuevos.classList.remove("show_button");
+        }
+      });
+    </script>
+  </body>
+</html>
