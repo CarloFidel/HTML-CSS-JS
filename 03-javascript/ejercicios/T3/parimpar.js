@@ -30,18 +30,14 @@ const borrando = () => {
 btn1.onclick = parimpar;
 borrar.onclick = borrando; */
 ///////////////////////////////////ejercicio02//////////////////////////////////////////
+let num = document.getElementById("in").value;
+console.log(num);
 
-/* function result() {
-  let a = 144;
-  let b = 12;
-  function div(a, b) {
-    let resul = a / b;
-    alert(resul);
+function valid() {
+  if (num !== res) {
+    alert("No es el resultado correcto");
   }
-  div(a, b)=  c;
 }
-div();
-console.log(c) */
 
 ///////////////////////////////////ejercicio03//////////////////////////////////////////
 
