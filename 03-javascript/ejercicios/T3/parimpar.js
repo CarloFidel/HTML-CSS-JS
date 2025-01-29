@@ -36,6 +36,12 @@ console.log(num);
 function valid() {
   if (num !== res) {
     alert("No es el resultado correcto");
+  } else {
+    div();
+    console.log(res);
+  }
+  function div() {
+    let res = 144 / 12;
   }
 }
 
