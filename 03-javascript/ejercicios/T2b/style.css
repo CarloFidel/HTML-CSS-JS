@@ -1,0 +1,54 @@
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.bt {
+  margin: 10px;
+}
+
+#ejercicio08 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+#ejer08 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#bt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 20px;
+}
+.form-control {
+  width: 60%;
+}
+
+#ejerc15 {
+  background-image: url("./Sin_título-removebg-preview.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+.mayax {
+  width: 20%;
+  height: 5%;
+  margin-bottom: 10px;
+}
+.tr {
+  margin-bottom: 50px;
+}
+.maya2 {
+  margin-top: -170px;
+}
+#ejerc18 {
+  padding: 30px;
+}

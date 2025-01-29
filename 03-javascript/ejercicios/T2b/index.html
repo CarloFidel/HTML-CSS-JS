@@ -4,92 +4,145 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="tit">Cambio de título y color ejercicio 8</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
-    <h1 id="textblue">Cambio de color para el texto</h1>
-    <h2 id="textblue2">Mirar en consola el ejercicio 9</h2>
-    <button onclick="gris()">Cambiar al color gris</button>
-    <button onclick="blanco()">Cambiar al color blanco</button>
-    <button onclick="textcolor()">
-      cambiar de color el texto del documento
-    </button>
+  <body style="background-color: rgb(128, 128, 155)">
+    <main>
+      <section id="ejercicio08">
+        <h1 id="textblue">Ejercicios T2b</h1>
+        <h2 class="h2">Ejercicios 08 y 09</h2>
+        <h3 class="h3" id="textblue2">Mirar en consola el ejercicio 9</h3>
+        <div id="bt">
+          <button class="btn btn-primary bt" onclick="gris()">
+            Cambiar al color gris
+          </button>
+          <button class="btn btn-primary bt" onclick="blanco()">
+            Regresar al color de fondo
+          </button>
+          <button class="btn btn-primary bt" onclick="textcolor()">
+            cambiar de color el texto del documento
+          </button>
+          <button
+            class="btn btn-primary bt"
+            id="nova_finestra"
+            onclick="finestra()"
+          >
+            Abre una ventana para el Ejercicio 12
+          </button>
+        </div>
+      </section>
+      <section id="ejerc12">
+        <h2 class="h2">Ejercicio12</h2>
+        <label class="form-floating mb-3" for="text">Ingresa un texto:</label>
+        <input class="form-control" id="input" type="text" />
+        <button class="btn btn-primary bt" id="click" onclick="valida()">
+          Mostrar los últimos 5 caracteres
+        </button>
+        <div>
+          <p class="alert alert-primary" id="result"></p>
+        </div>
+      </section>
+      <section id="ejerc13">
+        <h2 class="h2">Ejercicio13</h2>
+        <p class="form-label">Ingresa un texto:</p>
+        <input class="form-control" id="input13" type="text" />
+        <button class="btn btn-primary bt" id="caracteres" onclick="click13()">
+          Número de caracteres
+        </button>
+        <div>
+          <p id="result13"></p>
+        </div>
+      </section>
+      <section id="ejerc14">
+        <h2 class="h2">Ejercicio14</h2>
+        <p>Tabla con bordes colapsados</p>
+        <p id="tab"></p>
+        <div>
+          <button class="btn btn-primary bt" id="borrar" onclick="borrar()">
+            Reiniciar Tabla
+          </button>
+        </div>
+      </section>
+      <section id="ejerc15">
+        <div class="tr">
+          <h2 class="h2">Ejercicio15 Area de un triángulo</h2>
+        </div>
+        <div id="prim">
+          <input
+            id="base"
+            type="text"
+            placeholder="longitud de la base"
+            style="font-style: italic"
+          />
+        </div>
+        <div id="seg">
+          <input
+            id="altura"
+            type="text"
+            placeholder="altura del triángulo"
+            style="font-style: italic"
+          />
+        </div>
+        <p></p>
+        <div>
+          <button class="btn btn-primary bt" id="obtener" onclick="ar()">
+            Obtener área
+          </button>
+          <button class="btn btn-primary bt" id="volver" onclick="volver()">
+            Borrar inputs
+          </button>
+        </div>
+      </section>
+      <section id="ejerc16">
+        <h2 class="h2">Ejercicio 16 Bombilla</h2>
+        <div style="display: none" id="encendida">
+          <img src="./imgs_T2/encendida.gif" alt="" />
+        </div>
+        <div id="apagada">
+          <img src="./imgs_T2/apagada.gif" alt="" />
+        </div>
+        <p></p>
+        <div>
+          <button
+            class="btn btn-primary bt"
+            id="encendido"
+            onclick="encender()"
+          >
+            Encender bombilla
+          </button>
+          <button class="btn btn-primary bt" id="apagado" onclick="apagar()">
+            Apagar bombilla
+          </button>
+        </div>
+      </section>
+      <section id="ejerc17">
+        <h2 class="h2">Ejercicio 17 callendario Maya</h2>
+        <div>
+          <p class="alert alert-primary" id="hoy"></p>
+        </div>
+        <img
+          class="mayax"
+          src="./símbolo-maya-o-incan-de-un-sol-o-de-una-estrella-18353846-removebg-preview.png"
+          alt=""
+        />
 
-    <button id="nova_finestra" onclick="finestra()">
-      Abre una ventana para el Ejercicio 09
-    </button>
-    <section id="ejerc12">
-      <h2>Ejercicio12</h2>
-      <p>Ingresa un texto:</p>
-      <input id="input" type="text" />
-      <button id="click" onclick="valida()">
-        Mostrar los últimos 5 caracteres
-      </button>
-      <div>
-        <p id="result"></p>
-      </div>
-    </section>
-    <section id="ejerc13">
-      <h2>Ejercicio13</h2>
-      <p>Ingresa un texto:</p>
-      <input id="input13" type="text" />
-      <button id="caracteres" onclick="click13()">Número de caracteres</button>
-      <div>
-        <p id="result13"></p>
-      </div>
-    </section>
-    <section id="ejerc14">
-      <h2>Ejercicio 14</h2>
-      <p>Tabla con bordes colapsados</p>
-      <p id="tab"></p>
-      <div><button id="borrar" onclick="borrar()">Reiniciar Tabla</button></div>
-    </section>
-    <section id="ejerc15">
-      <h2>Ejercicio15 Area de un triángulo</h2>
-      <div id="prim">
-        <p>Ingrese longitud de la base</p>
-        <input id="base" type="text" />
-      </div>
-      <div id="seg">
-        <p>Ingrese altura del triángulo</p>
-        <input id="altura" type="text" />
-      </div>
-      <p></p>
-      <div>
-        <button id="obtener" onclick="ar()">Obtener área</button>
-        <button id="volver" onclick="volver()">Borrar inputs</button>
-      </div>
-    </section>
-    <section id="ejerc16">
-      <h2>Ejercicio 16 Bombilla</h2>
-      <div style="display: none" id="encendida">
-        <img src="./imgs_T2/encendida.gif" alt="" />
-      </div>
-      <div id="apagada">
-        <img src="./imgs_T2/apagada.gif" alt="" />
-      </div>
-      <p></p>
-      <div>
-        <button id="encendido" onclick="encender()">Encender bombilla</button>
-        <button id="apagado" onclick="apagar()">Apagar bombilla</button>
-      </div>
-    </section>
-    <section id="ejerc17">
-      <h2>Ejercicio 17 callendario Maya</h2>
-      <div>
-        <p id="hoy"></p>
-      </div>
-      <div>
-        <p id="maya"></p>
-      </div>
-      <p></p>
-    </section>
-    <section id="ejerc18">
-      <h2>Ejercicio 18</h2>
-      <div>
-        <p id="seg"></p>
-      </div>
-    </section>
-
+        <div>
+          <p class="alert alert-primary" id="maya"></p>
+        </div>
+      </section>
+      <section id="ejerc18">
+        <h2 class="maya2" class="h2">Ejercicio 18</h2>
+        <div>
+          <p class="alert alert-primary" id="segur"></p>
+        </div>
+      </section>
+    </main>
     <script src="script08.js"></script>
   </body>
 </html>
