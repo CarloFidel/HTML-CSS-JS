@@ -14,10 +14,8 @@
   </head>
   <body>
     <main class="container-fluid pt-5">
-      <h1 class="mb-5">Ejercicos JavaScript 3</h1>
-
-<!--       <section id="ejercicio01">
-        <h1 class="mb-5">Ejercicos JavaScript 3</h1>
+      <div id="divh1"><h1 class="mb-5">Ejercicos JavaScript 3</h1></div>
+      <section id="ejerc01">
         <h2>Ejercicio 1</h2>
         <p>
           Crea un HTML que amb la funció et demani un número per camp de text i
@@ -37,27 +35,33 @@
         <div id="mostra1" role="alert"></div>
         <div class="botones">
           <button class="btn btn-primary" id="btn_ejer1">
-            Ejecur ejercicio
+            Ejecutar ejercicio
           </button>
           <button class="btn btn-warning" id="btn_limpiar">
             Limpiar ejercicio
           </button>
         </div>
       </section>
- -->      <!-- <section id="ejercicio02">
-        <lebel>Diga el resultado de dividir 144/12</lebel>
-        <input type="text" />
-      </section> -->
       <section id="ejercicio02">
         <h2>Ejercicio 02</h2>
-        <div>
-          <label for="text">Esciba el resultado de 144/12 y pulse ok</label>
-          <input type="text" id="in" placeholder="resultado aquí" style="font-style: italic;">
+         <p>
+          Crea un HTML que amb la funció et demani un número per camp de text i
+          et digui si és parell o impar.
+        </p>
+        <div class="inp">
+          <label for="text" class="form-label">Esciba el resultado de 144/12 y ejecute</label>
+          <input type="text" class="form-control mb-5"  placeholder="resultado aquí" id="ent" style="font-style: italic;">
         </div>
-        <div>
-          <p>hola</p>
+        <div id="mos" role="alert"></div>
+        <div id="er"></div>
+
+        <div class="botones">
+        <button class="btn btn-primary" onclick="valid()"> Ejecutar ejercicio</button>
+        <button class="btn btn-warning" id="btn_limpiar">
+        Limpiar ejercicio
+        </button>
         </div>
-        <button class="bt" onclick="valid()"> Ok</button>
+
       </section>
       <section id="ejercicio03">
         <h2>Ejercicio 03</h2>
