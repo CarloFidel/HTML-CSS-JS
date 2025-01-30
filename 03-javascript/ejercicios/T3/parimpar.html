@@ -55,7 +55,7 @@
         <div id="error02" role="alert"></div>
 
         <div class="botones">
-        <button class="btn btn-primary" id="ejec02" onclick="valid()"> Ejecutar ejercicio</button>
+        <button class="btn btn-primary" id="ejec02"> Ejecutar ejercicio</button>
         <button class="btn btn-warning" id="limp02">
         Limpiar ejercicio
         </button>
@@ -64,20 +64,19 @@
       </section>
       <section id="ejercicio03">
         <h2>Ejercicio 03</h2>
+        <p> Escriviu un html que demani preu sense iva, després l'iva i et retorni el valor del producte amb iva, tot això amb camps de text i una funció. Crea un botó per esborrar les dades</p>
         <div id="precio">
-          <label for="text">Ingrese precio del producto sin IVA</label>
-          <input id="prod" type="text" />
+          <label for="text" class="form-label">Ingrese precio del producto sin IVA</label>
+          <input id="prod" class="form-control mb-5" type="text" />
         </div>
         <div id="impuesto">
-          <label for="text">Ingrese IVA</label>
-          <input id="iva" type="text" />
-        </div>
-        <div id="apagar">
-          <p id="pagar">0</p>
-        </div>
+          <label for="text" class="form-label">Ingrese IVA</label>
+          <input id="iva" class="form-control mb-5" type="text" />
+        <div id="mostra03" role="alert"></div>
+        <div id="error03" role="alert"></div>
         <div id="but">
-          <button id="bor" onclick="calc()">Calcula iva</button>
-          <button id="bor" onclick="volver()">Volver a calcular</button>
+          <button  id="btn03" class="btn btn-primary"  onclick="resultiva()">Calcula iva</button>
+          <button id="limp03" class="btn btn-warning" onclick="limpiar03()">Volver a calcular</button>
         </div>
       </section>
       <section id="ejercicio04">

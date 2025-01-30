@@ -61,19 +61,26 @@ const limpiar02 = () => {
 ejec02.onclick = ejecuta02;
 limp02.onclick = limpiar02;
 ///////////////////////////////////ejercicio03//////////////////////////////////////////
+const prod = document.querySelector("#prod").value;
+const iva = document.querySelector("#iva").value;
+const btn03 = document.querySelector("#btn03");
+const limp03 = document.querySelector("#limp03");
+const mostra03 = document.querySelector("#mostra03");
+console.log(prod);
+console.log(iva);
 
-function calc() {
-  let prod = document.getElementById("prod").value;
-  let iva = document.getElementById("iva").value;
-  let total = prod + (iva / 100) * prod;
+const resultiva = () => {
+  p03 = Number(prod);
+  iv03 = Number(iva);
+  resulto3;
+  console.log(iv03);
+  mostra03.innerHTML = result03;
+};
 
-  document.getElementById("pagar").innerHTML = `<p> ${total} </p>`;
-}
-
-function volver() {
-  document.getElementById("prod").value = "";
-  document.getElementById("iva").value = "";
-  document.getElementById("pagar").innerHTML = "0";
+function limpiar03() {
+  prod.value = "";
+  iva.value = "";
+  mostra03.innerHTML = "";
 }
 ///////////////////////////////////ejercicio04//////////////////////////////////////////
 document.getElementById("dos").style.display = "none";
