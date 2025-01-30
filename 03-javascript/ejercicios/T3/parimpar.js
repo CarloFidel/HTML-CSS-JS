@@ -66,14 +66,15 @@ const iva = document.querySelector("#iva").value;
 const btn03 = document.querySelector("#btn03");
 const limp03 = document.querySelector("#limp03");
 const mostra03 = document.querySelector("#mostra03");
+let result03;
 console.log(prod);
 console.log(iva);
 
 const resultiva = () => {
-  p03 = Number(prod);
-  iv03 = Number(iva);
-  resulto3;
-  console.log(iv03);
+  p03 = Number(prod.replace(",", "."));
+  iv03 = Number(iva.replace(",", "."));
+  result03 = p03 + (iv03 / 100 + p03);
+  console.log(result03);
   mostra03.innerHTML = result03;
 };
 
