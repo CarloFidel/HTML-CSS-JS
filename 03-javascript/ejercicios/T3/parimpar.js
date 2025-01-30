@@ -32,21 +32,41 @@ const borrando = () => {
 btn1.onclick = parimpar;
 borrar.onclick = borrando;
 ///////////////////////////////////ejercicio02//////////////////////////////////////////
-const m = document.querySelector("#mos");
-let num = document.querySelector("#ent");
-num = num.replace(",", ".");
-console.log(num);
+const inp02 = document.querySelector("#input02");
+const ejec02 = document.querySelector("#ejec02");
+const limp02 = document.querySelector("#limp02");
+const mostra02 = document.querySelector("#mostra02");
+let result02;
 
-if (isNaN(num) || num == "") {
-  document.querySelector("#inp").innerHTML(`hjkdshfkjsdhfjkhsd`);
-}
+const ejecuta02 = () => {
+  n02 = inp02.value;
+  n02 = Number(n02.replace(",", "."));
+  console.log(n02);
+  if (isNaN(n02) || n02 == "") {
+    result02 = `<div class="alert alert-danger">No puedo operar si no escribes números<br/>`;
+  } else if (n02 !== 12) {
+    result02 = `<div class="alert alert-danger">No es correcto<br/>`;
+  } else {
+    result02 = `<div class="alert alert-success">Correcto!!<br/>`;
+  }
 
+  mostra02.innerHTML = result02;
+};
+
+const limpiar02 = () => {
+  inp02.value = "";
+  mostra02.innerHTML = "";
+};
+
+ejec02.onclick = ejecuta02;
+limp02.onclick = limpiar02;
 ///////////////////////////////////ejercicio03//////////////////////////////////////////
 
 function calc() {
-  let prod = Number(document.getElementById("prod").value);
-  let iva = Number(document.getElementById("iva").value);
+  let prod = document.getElementById("prod").value;
+  let iva = document.getElementById("iva").value;
   let total = prod + (iva / 100) * prod;
+
   document.getElementById("pagar").innerHTML = `<p> ${total} </p>`;
 }
 
