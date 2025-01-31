@@ -61,29 +61,62 @@ const limpiar02 = () => {
 ejec02.onclick = ejecuta02;
 limp02.onclick = limpiar02;
 ///////////////////////////////////ejercicio03//////////////////////////////////////////
-const prod = document.querySelector("#prod").value;
-const iva = document.querySelector("#iva").value;
-const btn03 = document.querySelector("#btn03");
-const limp03 = document.querySelector("#limp03");
-const mostra03 = document.querySelector("#mostra03");
-let result03;
-console.log(prod);
-console.log(iva);
+const prod = document.querySelector("#prod");
+const iva = document.querySelector("#iva");
+const btn03 = document.querySelector("#boton03");
+const limp03 = document.querySelector("#borra03");
+const divi03 = document.querySelector("#mensaje");
 
-const resultiva = () => {
-  p03 = Number(prod.replace(",", "."));
-  iv03 = Number(iva.replace(",", "."));
-  result03 = p03 + (iv03 / 100 + p03);
-  console.log(result03);
-  mostra03.innerHTML = result03;
+const click03 = () => {
+  let resultado03;
+  let calciva;
+  let n03 = prod.value;
+  n03 = Number(n03.replace(",", "."));
+  let iva03 = iva.value;
+  iva03 = Number(iva03.replace(",", "."));
+  if (isNaN(n03) || isNaN(iva03) || n03 == "" || iva03 == "") {
+    resultado03 = `<div class="alert alert-danger">No puedo operar<br/>`;
+    divi03.innerHTML = resultado03;
+  } else {
+    calciva = n03 + (iva03 / 100) * n03;
+    resultado03 = `<div class="alert alert-success">El costo total del producto es ${calciva}<br/>`;
+  }
+  divi03.innerHTML = resultado03;
 };
 
-function limpiar03() {
+const borra03 = () => {
   prod.value = "";
   iva.value = "";
-  mostra03.innerHTML = "";
-}
+  divi03.innerHTML = "";
+};
+
+btn03.onclick = click03;
+limp03.onclick = borra03;
 ///////////////////////////////////ejercicio04//////////////////////////////////////////
-document.getElementById("dos").style.display = "none";
-let uno = document.getElementById("uno").value;
-console.log(uno);
+const num104 = document.querySelector("#in104");
+const mun204 = document.querySelector("#in204");
+const btn0104 = document.querySelector("#ejecutar04");
+const limp04 = document.querySelector("#limpiar04");
+const divi04 = document.querySelector("#mensaje04");
+
+const denuevo04 = () => {
+  num104.value = "";
+  mun204.value = "";
+  divi04.innerHTML = "";
+};
+
+const click04 = () => {
+  let n104 = num104.value;
+  n104 = Number(n104.replace(",", "."));
+  let n204 = num104.value;
+  n204 = Number(n204.replace(",", "."));
+  let resultado04;
+  let opera04;
+  if (isNaN(n104) || isNaN(iva204) || n104 == "" || n204 == "") {
+    resultado04 = `<div class="alert alert-danger">No puedo operar si no es un número`;
+    divi04.innerHTML = resultado04;
+  }
+};
+
+btn0104.onclick = click04;
+limp04.onclick = denuevo04;

@@ -14,7 +14,7 @@
   </head>
   <body>
     <main class="container-fluid pt-5">
-      <div id="divh1"><h1 class="mb-5">Ejercicos JavaScript 3</h1></div>
+      <div id="divh1"><h1 class="mb-5">Ejercicos JavaScript T3A</h1></div>
       <section id="ejerc01">
         <h2>Ejercicio 1</h2>
         <p>
@@ -67,47 +67,48 @@
         <p> Escriviu un html que demani preu sense iva, després l'iva i et retorni el valor del producte amb iva, tot això amb camps de text i una funció. Crea un botó per esborrar les dades</p>
         <div id="precio">
           <label for="text" class="form-label">Ingrese precio del producto sin IVA</label>
-          <input id="prod" class="form-control mb-5" type="text" />
+          <input id="prod" class="form-control mb-5" type="text" placeholder="Precio en €" />
         </div>
         <div id="impuesto">
           <label for="text" class="form-label">Ingrese IVA</label>
-          <input id="iva" class="form-control mb-5" type="text" />
-        <div id="mostra03" role="alert"></div>
+          <input id="iva" class="form-control mb-5" type="text" placeholder="%"  />
+        <div id="mensaje" role="alert"></div>
         <div id="error03" role="alert"></div>
-        <div id="but">
-          <button  id="btn03" class="btn btn-primary"  onclick="resultiva()">Calcula iva</button>
-          <button id="limp03" class="btn btn-warning" onclick="limpiar03()">Volver a calcular</button>
+        <div class="botones">
+          <button  id="boton03" class="btn btn-primary"  >Calcula iva</button>
+          <button id="borra03" class="btn btn-warning" >Volver a calcular</button>
         </div>
       </section>
       <section id="ejercicio04">
         <h2>Ejercicio 04</h2>
-        <br />
-        <br />
-        <div id="uno">
-        <lebel for="text">Introduzca un primer número</lebel>
-        <input type="text" />
+        <p>
+          Escriu un programa que demani un primer número, ens permeti triar un select: suma, resta, multiplica, divideix, o mòdul, després ens demani un segon número i ens doni el resultat de l'operació seleccionada. Tot això amb camps de text i select.
+        </p>
+        <div id="uno04">
+        <lebel for="text"  class="form-label">Introduzca un primer número</lebel>
+        <input id="in104" type="text" class="form-control mb-5"/>
         </div>
-        <div id="dos">
-        <lebel for="text">Introduzca un segundo número</lebel>
-        <input type="text" />
+        <div id="dos04">
+        <lebel for="text"  class="form-label">Introduzca un segundo número</lebel>
+        <input id="in204" type="text" class="form-control mb-5"/>
         </div>
-
-        <p>seleccione la operación deseada</p>
-        <form action="/action_page.php">
+        <div id="mensaje04"></div>
           <div >
-          <label for="cars">Choose a car:</label>
-          <select name="cars" id="cars">
-            <br>
+        <lebel for="text"  class="form-label">Seleccione la operación</lebel>
+          <select class="form-select form-select-sm" name="cars" id="cars">
           </div>
-            <option value="volvo">suma</option>
-            <option value="saab">resta</option>
-            <option value="opel">multiplica</option>
-            <option value="audi">divide</option>
+            <option value="suma">suma</option>
+            <option value="resta">resta</option>
+            <option value="multiplica">multiplica</option>
+            <option value="divide">divide</option>
             <option value="modulo">modulo</option>
-
           </select>
+          <div class="botones">
+            <button id="ejecutar04" class="btn btn-primary"> Ejecuta la operación</button>
+            <button id="limpiar04" class="btn btn-warning"> Volver a probar</button>
+          </div>
+
           <br />
-        </form>
       </section>
     </main>
     <script src="parimpar.js"></script>

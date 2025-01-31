@@ -24,3 +24,9 @@ section {
   display: flex;
   flex-direction: column;
 }
+input::placeholder {
+  font-style: italic;
+}
+input {
+  font-style: normal;
+}
