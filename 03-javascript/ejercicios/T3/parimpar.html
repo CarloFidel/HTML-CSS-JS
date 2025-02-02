@@ -88,21 +88,23 @@
         <lebel for="text"  class="form-label">Introduzca un primer número</lebel>
         <input id="in104" type="text" class="form-control mb-5"/>
         </div>
-        <div id="dos04">
+        <div id="sele04">
+         <lebel for="text"  class="form-label">Seleccione la operación</lebel>
+          <select class="form-select form-select-sm" id="mat">
+            <option value="" style="font-style: italic; background-color: rgb(180, 189, 229);">--Selecciona--</option>
+            <option value="suma">Suma</option>
+            <option value="resta">Resta</option>
+            <option value="multiplica">Multiplica</option>
+            <option value="divide">Divide</option>
+            <option value="modulo">Modulo</option>
+        </div>
+          </select>
+        <div id="seg04" >
         <lebel for="text"  class="form-label">Introduzca un segundo número</lebel>
         <input id="in204" type="text" class="form-control mb-5"/>
         </div>
         <div id="mensaje04"></div>
-          <div >
-        <lebel for="text"  class="form-label">Seleccione la operación</lebel>
-          <select class="form-select form-select-sm" name="cars" id="cars">
-          </div>
-            <option value="suma">suma</option>
-            <option value="resta">resta</option>
-            <option value="multiplica">multiplica</option>
-            <option value="divide">divide</option>
-            <option value="modulo">modulo</option>
-          </select>
+       
           <div class="botones">
             <button id="ejecutar04" class="btn btn-primary"> Ejecuta la operación</button>
             <button id="limpiar04" class="btn btn-warning"> Volver a probar</button>

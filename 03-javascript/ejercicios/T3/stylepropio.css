@@ -30,3 +30,14 @@ input::placeholder {
 input {
   font-style: normal;
 }
+select {
+  margin-bottom: 15px;
+}
+#uno04 {
+  margin-top: -5px;
+  margin-bottom: 0px;
+}
+#sele04 {
+  margin-top: -30px;
+  margin-bottom: 0px;
+}

@@ -94,28 +94,57 @@ btn03.onclick = click03;
 limp03.onclick = borra03;
 ///////////////////////////////////ejercicio04//////////////////////////////////////////
 const num104 = document.querySelector("#in104");
-const mun204 = document.querySelector("#in204");
+const num204 = document.querySelector("#in204");
 const btn0104 = document.querySelector("#ejecutar04");
 const limp04 = document.querySelector("#limpiar04");
 const divi04 = document.querySelector("#mensaje04");
-
-const denuevo04 = () => {
-  num104.value = "";
-  mun204.value = "";
-  divi04.innerHTML = "";
-};
+const sele = document.querySelector("#mat");
 
 const click04 = () => {
   let n104 = num104.value;
   n104 = Number(n104.replace(",", "."));
-  let n204 = num104.value;
+  let n204 = num204.value;
   n204 = Number(n204.replace(",", "."));
+
   let resultado04;
-  let opera04;
-  if (isNaN(n104) || isNaN(iva204) || n104 == "" || n204 == "") {
-    resultado04 = `<div class="alert alert-danger">No puedo operar si no es un número`;
+  if (isNaN(n104) || isNaN(n204) || n104 == "" || n204 == "") {
+    resultado04 = `<div class="alert alert-danger">No puedo operar si no son dos números`;
     divi04.innerHTML = resultado04;
+  } else {
+    let s = document.querySelector("#mat");
+    let i = s.selectedIndex;
+    let oper = s.options[i].text;
+    if (oper == "Suma") {
+      resultado04 = n104 + n204;
+      resultado04 = `<div class="alert alert-success">El resultado de sumar ${n104} y ${n204} es ${resultado04}`;
+      divi04.innerHTML = resultado04;
+    }
+    if (oper == "Resta") {
+      resultado04 = n104 - n204;
+      resultado04 = `<div class="alert alert-success">El resultado de restar ${n104} y ${n204} es ${resultado04}`;
+      divi04.innerHTML = resultado04;
+    }
+    if (oper == "Multiplica") {
+      resultado04 = n104 * n204;
+      resultado04 = `<div class="alert alert-success">El resultado de multiplicar ${n104} y ${n204} es ${resultado04}`;
+      divi04.innerHTML = resultado04;
+    }
+    if (oper == "Divide") {
+      resultado04 = n104 / n204;
+      resultado04 = `<div class="alert alert-success">El resultado de dividir ${n104} y ${n204} es ${resultado04}`;
+      divi04.innerHTML = resultado04;
+    }
+    if (oper == "Modulo") {
+      resultado04 = n104 % n204;
+      resultado04 = `<div class="alert alert-success">El resultado de restar ${n104} y ${n204} es ${resultado04}`;
+      divi04.innerHTML = resultado04;
+    }
   }
+};
+const denuevo04 = () => {
+  num104.value = "";
+  num204.value = "";
+  divi04.innerHTML = "";
 };
 
 btn0104.onclick = click04;
