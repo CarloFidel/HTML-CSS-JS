@@ -78,3 +78,34 @@ const decero = () => {
 };
 reg.onclick = val;
 limp.onclick = decero;
+
+const formu = document.firstContact;
+
+formu.addEventListener("submit", (e) => {
+  const vnom = valnom();
+  const vtelf = valtelf();
+  const vdia = valdia();
+  const vmes = valmes();
+  const vaño = valaño();
+  const vmail = valmail();
+  const vdni = valdni();
+
+  if (!vnom || !vtelf || !vdia || !vmes || !vaño || !vmail || !vdni) {
+    e.preventDefault();
+    res.innerHTML =
+      "ERRORUM   No se ha podido enviar el formulario. Por favor, revisa que todos los campos estén rellenados correctamente.";
+    error.style.color = "#FF0000";
+    return false;
+  } else {
+    formu.submit();
+    return true;
+  }
+});
+
+const valnom = () => {
+  if (nom == "^[A-ZÀ]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1s]{2,40}$") {
+    return false;
+  } else {
+    return true;
+  }
+};
