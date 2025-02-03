@@ -14,8 +14,9 @@
   </head>
   <body>
     <main class="container-fluid pt-5">
-      <div id="divh1"><h1 class="mb-5">Ejercicos JavaScript T3A</h1></div>
-      <section id="ejerc01">
+      <div id="divh1">
+      <h1 class="mb-5">Ejercicos JavaScript T3A</h1></div>
+      <section id="ejercicio01">
         <h2>Ejercicio 1</h2>
         <p>
           Crea un HTML que amb la funció et demani un número per camp de text i
@@ -112,6 +113,94 @@
 
           <br />
       </section>
+      <section id="ejercicio05">
+        <h2>Ejercicio 05</h2>
+         <p>
+          Crea un nou document HTML que ens demani un nombre d'etiquetes a imprimir, i les imprimiu a la pàgina un llistat dels codis d'un producte inventat… codi_producte 0 , codi_producte 1……
+        </p>
+        <div class="inp">
+          <label for="text" class="form-label"></label>
+          <input type="text" class="form-control mb-5"  placeholder="Esciba el número de etiquetas" id="input05">
+        </div>
+        <div id="mostra05" role="alert"></div>
+        
+        <div id="error05" role="alert"></div>
+
+        <div class="botones" id="btn05" >
+        <button class="btn btn-primary" id="ejec05"> Ejecutar ejercicio</button>
+        <button class="btn btn-warning" id="limp05">
+        Limpiar ejercicio
+        </button>
+        </div>
+
+      </section>
+      <section id="ejercicio06">
+        <h2>Ejercicio 06</h2>
+         <p>
+          Crea un nou document HTML amb una funció que ens mostri l'amplada de pantalla, alt de pantalla, amplada útil, alt útil, profunditat de color i diagonal de pantalla en píxels i ens ho mostri en un div en accionar un hiperenllaç.
+        </p>
+        <div>
+          <p id="prop06" onclick="pantalla()" style="font-weight: bolder;">Mostrar propiedades de la pantalla</p>
+        </div>
+        <div id="mostra06"> </div>
+         <button class="btn btn-warning" id="limp05" onclick="limp06()">
+        Limpiar ejercicio
+        </button>
+      </section>
+      <section id="ejercicio07">
+        <h2>Ejercicio 07</h2>
+         <p>
+          A partir del mètode bgColor del document, construeix una funció que en carregar un html permeti en un select, seleccionar un color de quatre i amb un botó que rasigni a la pàgina aquest color de forndo.
+        </p>
+        <div id="selectcolor">
+        <select name="color" id="select07">
+          <option value="azul">Azul</option>
+          <option value="verde">Verde</option>
+          <option value="naranja">Naranja</option>
+          <option value="rojo">Rojo</option>
+        </select>
+        </div>
+        <div class="botones">
+        <button class="btn btn-primary" id="ejec07"> Cambiar color</button>
+        <button class="btn btn-warning" id="limp07">
+        Atrás
+        </button>
+        </div>
+
+      </section>
+      <section id="ejercicio08">
+        <h2>Ejercicio 08</h2>
+         <p>
+          Escriu un html que permeti obrir des d'un botó, una finestra controlada des de javascript, escrivint l'html necessari per mostrar un text amb les propietats utilitzades i un botó que permeti tancar la nova finestra.        </p>
+
+        <div class="botones">
+        <button class="btn btn-primary" id="ejec08"> Abrir ventana </button>
+      
+        </div>
+
+      </section>
+      <section id="ejercicio09">
+        <h2>Ejercicio 09</h2>
+         <p>
+          Escriu un html que demani per control de text una frase, guarda-la com un objecte String i per mitjà d’una funció ens dirà el número de caràcters escrits, que el re-escrigui en cursiva, en negreta, en color vermell, a una mida molt gran, i finalment titllada.</p>
+        <div class="inp">
+          <label for="text" class="form-label"></label>
+          <input type="text" class="form-control mb-5"  placeholder="Escriba la frase aquí" id="input09">
+        </div>
+        <div id="mostra09" role="alert"></div>
+        <div id="error09" role="alert"></div>
+
+        <div class="botones" id="btn09" >
+        <button class="btn btn-primary" id="ejec09"> Ejecutar ejercicio</button>
+        <button class="btn btn-warning" id="limp09">
+        Limpiar ejercicio
+        </button>
+        </div>
+
+      </section>
+
+
+
     </main>
     <script src="parimpar.js"></script>
   </body>

@@ -149,3 +149,116 @@ const denuevo04 = () => {
 
 btn0104.onclick = click04;
 limp04.onclick = denuevo04;
+///////////////////////////////////ejercicio05//////////////////////////////////////////
+const etiq = document.querySelector("#input05");
+const ejec05 = document.querySelector("#ejec05");
+const volv05 = document.querySelector("#limp05");
+const div05 = document.querySelector("#mostra05");
+
+const denuevo05 = () => {
+  etiq.value = "";
+  div05.innerHTML = "";
+};
+const click05 = () => {
+  et = etiq.value;
+  et = Number(et.replace(",", "."));
+  etr = Math.round(et);
+  if (isNaN(etr) || etr == "") {
+    let resul05 = `<div class="alert alert-danger">No puedo operar si no ingresas un número`;
+    div05.innerHTML = resul05;
+  } else {
+    let codi = [];
+    let prod = [];
+    let resul05 = `<ul class="alert alert-success" id="list05">`;
+    for (let i = 0; i < etr; i++) {
+      codi.push(`Etiqueta: ${Math.round(Math.random() * 1034500)}`);
+      prod.push(`Producto ${i + 1}`);
+      resul05 += `<li>${prod[i]}: ${codi[i]} </li>`;
+    }
+    resul05 = resul05 + "</ul>";
+    div05.innerHTML = resul05;
+  }
+};
+ejec05.onclick = click05;
+volv05.onclick = denuevo05;
+///////////////////////////////////ejercicio06//////////////////////////////////////////
+const anc = document.querySelector("#prop06");
+const mostra06 = document.querySelector("#mostra06");
+
+const pantalla = () => {
+  res06 = `<ul style="list-style-type:none" class="alert alert-success"> <li> La altura de la pantalla es ${
+    screen.height
+  } px </li> <li>La altura útil de pantalla es ${
+    window.innerHeight
+  } px </li> <li> El ancho de la pantalla es de ${
+    screen.width
+  } px </li> <li> El ancho útil de pantalla es de ${
+    window.innerWidth
+  } px <li> La profundidad de color es de ${
+    screen.colorDepth
+  } bit </li> <li> La diagonal es de ${Math.round(
+    Math.sqrt(screen.height * screen.height + screen.width * screen.width)
+  )} px </li> </ul>`;
+
+  mostra06.innerHTML = res06;
+};
+const limp06 = () => {
+  location.reload();
+};
+///////////////////////////////////ejercicio07//////////////////////////////////////////
+const elecc07 = document.querySelector("#select07").value;
+const btn07 = document.querySelector("#ejec07");
+const back = document.querySelector("#limp07");
+
+const color07 = () => {
+  const elecc07 = document.querySelector("#select07").value;
+  switch (elecc07) {
+    case "azul":
+      document.body.style.backgroundColor = "rgb(103, 107, 220)";
+      break;
+    case "verde":
+      document.body.style.backgroundColor = "rgb(124, 225, 126)";
+      break;
+    case "naranja":
+      document.body.style.backgroundColor = "rgb(227, 161, 95)";
+      break;
+    case "rojo":
+      document.body.style.backgroundColor = "rgb(231, 147, 147)";
+      break;
+    default:
+      document.body.style.backgroundColor = "white";
+      break;
+  }
+};
+const altras07 = () => {
+  document.body.style.backgroundColor = "white";
+};
+btn07.onclick = color07;
+back.onclick = altras07;
+///////////////////////////////////ejercicio08//////////////////////////////////////////
+const vent = document.querySelector("#ejec08");
+const ini = document.querySelector("#limp08");
+
+const nova08 = () => {
+  win08 = window.open("nova.html");
+};
+
+vent.onclick = nova08;
+///////////////////////////////////ejercicio09//////////////////////////////////////////
+const inp09 = document.querySelector("#input09");
+const btn09 = document.querySelector("#ejec09");
+const back09 = document.querySelector("#limp09");
+const div09 = document.querySelector("#mostra09");
+
+const string09 = () => {
+  let st = inp09.value.split(" ");
+  let result09 = `<div class="alert alert-success">La cantidad de caracteres es ${st.length}</div>`;
+  div09.innerHTML = result09;
+};
+
+const limpia09 = () => {
+  inp09.value = "";
+  div09.innerHTML = "";
+};
+btn09.onclick = string09;
+back09.onclick = limpia09;

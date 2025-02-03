@@ -41,3 +41,24 @@ select {
   margin-top: -30px;
   margin-bottom: 0px;
 }
+#list05 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  border: 1px solid rgb(166, 159, 159);
+  list-style-type: none;
+  border-collapse: inherit;
+  margin: 0 auto;
+}
+#btn05 {
+  margin-top: 30px;
+}
+#prop06 {
+  width: fit-content;
+}
+#prop06:hover {
+  cursor: pointer;
+  color: rgb(37, 37, 190);
+  text-rendering: rgb(147, 150, 231);
+}
