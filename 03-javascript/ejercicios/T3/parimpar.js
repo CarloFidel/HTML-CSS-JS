@@ -249,16 +249,61 @@ const inp09 = document.querySelector("#input09");
 const btn09 = document.querySelector("#ejec09");
 const back09 = document.querySelector("#limp09");
 const div09 = document.querySelector("#mostra09");
+const div209 = document.querySelector("#mostra209");
+const rees = document.querySelector("#ejec209");
 
 const string09 = () => {
-  let st = inp09.value.split(" ");
-  let result09 = `<div class="alert alert-success">La cantidad de caracteres es ${st.length}</div>`;
+  let cant = inp09.value.length;
+  let result09 = `<div class="alert alert-success">La cantidad de caracteres es ${cant}</div>`;
   div09.innerHTML = result09;
+};
+
+const reescribe = () => {
+  const inp09 = document.querySelector("#input09").value;
+  let result209 = `<div  > ${inp09}</div>`;
+  div209.innerHTML = result209;
 };
 
 const limpia09 = () => {
   inp09.value = "";
   div09.innerHTML = "";
+  div209.innerHTML = "";
 };
+
 btn09.onclick = string09;
+rees.onclick = reescribe;
 back09.onclick = limpia09;
+///////////////////////////////////ejercicio10//////////////////////////////////////////
+const enc10 = document.querySelector("#enc10");
+const apg10 = document.querySelector("#apg10");
+const div10 = document.querySelector("#encendida10");
+const div210 = document.querySelector("#apagada10");
+div10.style.display = "none";
+div210.style.display = "block";
+
+enc10.style.display = "none";
+apg10.style.display = "none";
+
+const encender = () => {
+  div10.style.display = "block";
+  div210.style.display = "none";
+};
+const apagar = () => {
+  div10.style.display = "none";
+  div210.style.display = "block";
+};
+////////////Variante 1////////////
+/* div210.addEventListener("mouseover", encender);
+div10.addEventListener("mouseout", apagar);
+ */
+////////////Variante 2////////////
+div210.addEventListener("dblclick", encender);
+div10.addEventListener("click", apagar);
+
+////////////Variante 3////////////
+/* enc10.style.display = "block";
+apg10.style.display = "block";
+
+enc10.onclick = encender;
+apg10.onclick = apagar;
+ */
