@@ -1,3 +1,60 @@
 input::placeholder {
   font-style: italic;
 }
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+#check {
+  padding: 20px;
+  padding-left: 0;
+}
+#inp {
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid rgb(195, 194, 194);
+  border-radius: 10px;
+  background-color: rgb(225, 201, 176);
+}
+#bot {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  gap: 70px;
+  justify-content: center;
+}
+form {
+  border: 1px solid rgb(195, 194, 194);
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(186, 214, 186);
+}
+#textareaconteiner {
+  display: flex;
+  justify-content: center;
+}
+#textarea {
+  height: 200px;
+  width: 600px;
+  background-color: rgb(184, 193, 156);
+  border: 1px solid rgb(170, 168, 168);
+  padding: 30px;
+  font-weight: bold;
+  color: rgb(77, 103, 152);
+  font-style: italic;
+}
+#err {
+  display: flex;
+  justify-content: center;
+}
+label {
+  margin-top: 20px;
+}
+#acepto {
+  margin-top: 26px;
+}
+.formulario_incorrecto {
+  font-weight: bold;
+  color: rgb(153, 55, 55);
+}

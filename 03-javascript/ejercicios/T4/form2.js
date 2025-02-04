@@ -1,134 +1,140 @@
-const nom = document.querySelector("#usuario");
-const telf = document.querySelector("#telefono");
-const dia = document.querySelector("#dia");
-const mes = document.querySelector("#mes");
-const año = document.querySelector("#año");
-const mail = document.querySelector("#mail");
-const dni = document.querySelector("#dni");
-const check = document.querySelector("#acepto");
-const men = document.querySelector("#mens");
-const ta = document.querySelector("#textarea");
+const formulario = document.querySelector("#contact");
+const inputs = document.querySelectorAll("#contact input");
+const textarea = document.querySelector("#textarea");
+const inputnombre = document.querySelector("#usuario");
+const inputtelefono = document.querySelector("#telefono");
+const inputfecha = document.querySelector("#edad");
+const inputemail = document.querySelector("#mail");
+const inputdni = document.querySelector("#dni");
+const condiciones = document.querySelector("#acepto").checked;
+const msm = document.querySelector("#mens");
 
-const validarFormulario = () => {
-  const validarNombre = () => {
-    const valor = nom.value;
-    const regex = /^[^\d][\w\s]{2,19}$/;
-    if (!regex.test(valor)) return false;
-    return true;
-  };
+inputnombre.addEventListener("keyup", () => {
+  const text = inputnombre.value;
+  textarea.innerHTML = text;
+});
+inputtelefono.addEventListener("keyup", () => {
+  const text = inputtelefono.value;
+  textarea.innerHTML = text;
+});
+inputemail.addEventListener("keyup", () => {
+  const text = inputemail.value;
+  textarea.innerHTML = text;
+});
+inputdni.addEventListener("keyup", () => {
+  const text = inputdni.value;
+  textarea.innerHTML = text;
+});
+inputfecha.addEventListener("change", () => {
+  const text = inputfecha.value;
+  textarea.innerHTML = text;
+});
 
-  const validarTelefono = () => {
-    const valor = telf.value;
-    const regex = /^\d{9}$/;
-    if (!regex.test(valor)) return false;
-    return true;
-  };
-
-  const validarFechaNacimiento = () => {
-    const valorDia = parseInt(dia.value, 10);
-    const valorMes = parseInt(mes.value, 10);
-    const valorAño = parseInt(año.value, 10);
-    const fecha = new Date(valorAño, valorMes - 1, valorDia);
-    const hoy = new Date();
-    const edad = hoy.getFullYear() - fecha.getFullYear();
-    if (
-      isNaN(fecha) ||
-      fecha.getFullYear() !== valorAño ||
-      fecha.getMonth() + 1 !== valorMes ||
-      fecha.getDate() !== valorDia ||
-      edad < 18
-    ) {
-      return false;
-    }
-    return true;
-  };
-
-  const validarEmail = () => {
-    const valor = mail.value;
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!regex.test(valor)) return false;
-    return true;
-  };
-
-  const validarDNI = () => {
-    const valor = dni.value;
-    const regexDNI = /^\d{8}[a-zA-Z]$/;
-    const regexNIE = /^[XYZxyz]\d{7}[a-zA-Z]$/;
-    if (!regexDNI.test(valor) && !regexNIE.test(valor)) return false;
-    return true;
-  };
-
-  let esValido = true;
-  let mensaje = "";
-
-  if (!validarNombre()) {
-    esValido = false;
-    mensaje += "Nombre inválido. ";
-  }
-
-  if (!validarTelefono()) {
-    esValido = false;
-    mensaje += "Teléfono inválido. ";
-  }
-
-  if (!validarFechaNacimiento()) {
-    esValido = false;
-    mensaje += "Fecha de nacimiento inválida o menor de edad. ";
-  }
-
-  if (!validarEmail()) {
-    esValido = false;
-    mensaje += "Email inválido. ";
-  }
-
-  if (!validarDNI()) {
-    esValido = false;
-    mensaje += "DNI/NIE inválido. ";
-  }
-
-  if (!check.checked) {
-    esValido = false;
-    mensaje += "Debe aceptar las condiciones. ";
-  }
-
-  men.innerHTML = mensaje;
-  return esValido;
+const exp = {
+  nombre: /^[A-ZÀ][a-zA-ZÀ-ÿ\s]{3,20}$/,
+  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  telefono: /^(\d\d\d)-? ?(\d\d)-? ?(\d)-? ?(\d)-? ?(\d\d)$/,
+  dni: /^[XYZ]?\d{5,8}[A-Z]{1}$/,
 };
 
-const manejarKeyUp = (event) => {
-  let valido = false;
+const campos = {
+  nombre: false,
+  telefono: false,
+  fecha: false,
+  email: false,
+  dni: false,
+  acepto: false,
+};
 
-  switch (event.target.id) {
+const validarFormulario = (e) => {
+  const condiciones = document.querySelector("#acepto").checked;
+  if (condiciones) {
+    campos["acepto"] = true;
+  } else {
+    campos["acepto"] = false;
+    let res = `<div class="alert alert-danger">Por favor acepta las condiciones</div>`;
+    msm.innerHTML = res;
+  }
+  switch (e.target.id) {
     case "usuario":
-      valido = validarNombre();
+      if (exp.nombre.test(e.target.value)) {
+        textarea.innerHTML = `<div >Es correcto: ${inputnombre.value}</div>`;
+        campos["nombre"] = true;
+      } else {
+        textarea.innerHTML = `<div class= formulario_incorrecto>ES INCORRECTO: ${inputnombre.value}</div>`;
+        campos["nombre"] = false;
+      }
       break;
     case "telefono":
-      valido = validarTelefono();
+      if (exp.telefono.test(e.target.value)) {
+        textarea.innerHTML = `<div >Es correcto: ${inputtelefono.value}</div>`;
+        campos["telefono"] = true;
+      } else {
+        textarea.innerHTML = `<div class= "formulario_incorrecto">ES INCORRECTO: ${inputtelefono.value}</div>`;
+        campos["telefono"] = false;
+      }
       break;
-    case "dia":
-    case "mes":
-    case "año":
-      valido = validarFechaNacimiento();
+    case "edad":
+      if (edad()) {
+        textarea.innerHTML = `<div>Es correcto: ${inputfecha.value}</div>`;
+        campos["fecha"] = true;
+      } else {
+        textarea.innerHTML = `<div class="formulario_incorrecto">ES INCORRECTO: ${inputfecha.value}</div>`;
+        campos["fecha"] = false;
+      }
       break;
     case "mail":
-      valido = validarEmail();
+      if (exp.correo.test(e.target.value)) {
+        textarea.innerHTML = `<dv >Es correcto: ${inputemail.value}</dv>`;
+        campos["email"] = true;
+      } else {
+        textarea.innerHTML = `<div class= "formulario_incorrecto">ES INCORRECTO: ${inputemail.value}</div>`;
+        campos["email"] = false;
+      }
       break;
     case "dni":
-      valido = validarDNI();
+      if (exp.dni.test(e.target.value)) {
+        textarea.innerHTML = `<div >Es correcto: ${inputdni.value}</div>`;
+        campos["dni"] = true;
+      } else {
+        textarea.innerHTML = `<div class= "formulario_incorrecto">ES INCORRECTO: ${inputdni.value}</div>`;
+        campos["dni"] = false;
+      }
       break;
   }
-
-  ta.innerHTML = event.target.value + (valido ? " (Válido)" : " (Inválido)");
 };
 
-document
-  .querySelectorAll("#usuario, #telefono, #dia, #mes, #año, #mail, #dni")
-  .forEach((input) => {
-    input.addEventListener("keyup", manejarKeyUp);
-  });
+const edad = () => {
+  let fechaNacimiento = inputfecha.value;
+  let fechaNace = new Date(fechaNacimiento);
+  let fechaActual = new Date();
 
-document.querySelector("#myForm").addEventListener("submit", (event) => {
-  if (!validarFormulario()) {
-    event.preventDefault();
+  let mi_edad = Math.floor(
+    (fechaActual - fechaNace) / (1000 * 60 * 60 * 24) / 365
+  );
+  if (mi_edad >= 18 && mi_edad <= 100) return true;
+  return false;
+};
+
+inputs.forEach((input) => {
+  input.addEventListener("keyup", validarFormulario);
+  input.addEventListener("change", validarFormulario);
+});
+
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (
+    campos.nombre &&
+    campos.telefono &&
+    campos.dni &&
+    campos.fecha &&
+    campos.acepto
+  ) {
+    window.open();
+    formulario.submit();
   }
 });
+const limpiatodo = () => {
+  textarea.innerHTML = "";
+  msm.innerHTML = "";
+};

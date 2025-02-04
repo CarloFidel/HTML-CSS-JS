@@ -1,99 +1,23 @@
-let nom = document.querySelector("#usuario");
-let telf = document.querySelector("#telefono");
-let dia = document.querySelector("#dia");
-let mes = document.querySelector("#mes");
-let año = document.querySelector("#año");
-let mail = document.querySelector("#mail");
-let dni = document.querySelector("#dni");
-let check = document.querySelector("#acepto");
-const men = document.querySelector("#mens");
-const reg = document.querySelector("#regis");
-const limp = document.querySelector("#clean");
-const guardar = document.querySelector("#guarda");
-const rec = document.querySelector("#recupera");
-const ta = document.querySelector("#textarea");
-
-const val = () => {
-  let res;
-  if (!check.checked) {
-    res = `Debe aceptar las condiciones para validar el formulario`;
-    men.innerHTML = res;
-  } else {
-  }
-};
-
-const teclnom = () => {
-  let te = nom.value;
-  ta.innerHTML = te;
-};
-nom.addEventListener("keyup", teclnom);
-
-const tecltel = () => {
-  let te = telf.value;
-  ta.innerHTML = te;
-};
-telf.addEventListener("keyup", tecltel);
-
-const tecldia = () => {
-  let te = dia.value;
-  ta.innerHTML = te;
-};
-dia.addEventListener("keyup", tecldia);
-
-const teclmes = () => {
-  let te = mes.value;
-  ta.innerHTML = te;
-};
-mes.addEventListener("keyup", teclmes);
-
-const teclaño = () => {
-  let te = año.value;
-  ta.innerHTML = te;
-};
-año.addEventListener("keyup", teclaño);
-
-const teclmail = () => {
-  let te = mail.value;
-  ta.innerHTML = te;
-};
-mail.addEventListener("keyup", teclmail);
-
-const tecldni = () => {
-  let te = dni.value;
-  ta.innerHTML = te;
-};
-dni.addEventListener("keyup", tecldni);
-
-const decero = () => {
-  nom.value = "";
-  telf.value = "";
-  dia.value = "";
-  mes.value = "";
-  año.value = "";
-  mail.value = "";
-  dni.value = "";
-  check.value = "";
-  men.innerHTML = "";
-  ta.innerHTML = "";
-};
-reg.onclick = val;
-limp.onclick = decero;
-
 const formu = document.firstContact;
+const usu = formu.inp;
+const tlf = formu.telefono;
+const error = document.querySelector("#mens");
+
+//
+const corr = formu.mail;
+const fech = formu.edad;
+const vdni = formu.dni;
+const pdni = /^[XYZ]?\d{5,8}[A-Z]{1}$/;
 
 formu.addEventListener("submit", (e) => {
-  const vnom = valnom();
-  const vtelf = valtelf();
-  const vdia = valdia();
-  const vmes = valmes();
-  const vaño = valaño();
-  const vmail = valmail();
-  const vdni = valdni();
+  const mydni = valdni();
+  const edad = valfech();
+  const mynom = valnom();
+  const mymail = valmail();
 
-  if (!vnom || !vtelf || !vdia || !vmes || !vaño || !vmail || !vdni) {
+  if (!mydni || !edad || !mynom || !mymail) {
     e.preventDefault();
-    res.innerHTML =
-      "ERRORUM   No se ha podido enviar el formulario. Por favor, revisa que todos los campos estén rellenados correctamente.";
+    error.innerHTML = `<div class="alert alert-danger"> No se ha podido enviar el formulario.Por favor, revisa que todos los campos estén rellenados correctamente.</div>`;
     error.style.color = "#FF0000";
     return false;
   } else {
@@ -102,10 +26,58 @@ formu.addEventListener("submit", (e) => {
   }
 });
 
-const valnom = () => {
-  if (nom == "^[A-ZÀ]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1s]{2,40}$") {
-    return false;
-  } else {
+const valdni = () => {
+  let rdni = vdni.value;
+  rdni = rdni.toUpperCase();
+  let numero, unaLetra;
+  let resul = rdni.match(pdni);
+  let letra = "TRWAGMYFPDXBNJZSQVHLCKE";
+
+  if (resul) {
+    numero = rdni.substr(0, rdni.length - 1);
+    numero = numero.replace("X", 0);
+    numero = numero.replace("Y", 1);
+    numero = numero.replace("Z", 2);
+    unaLetra = rdni.substr(rdni.length - 1, 1);
+    numero = numero % 23;
+    letra = letra.substring(numero, numero + 1);
+
+    if (letra !== unaLetra) return false;
     return true;
+  } else {
+    return false;
   }
+};
+
+const valfech = () => {
+  let nacimiento = fech.value;
+  let fechaNace = new Date(nacimiento);
+  console.log(fechaNace);
+  let fechaActual = new Date();
+
+  let mi_edad = Math.floor(
+    (fechaActual - fechaNace) / (1000 * 60 * 60 * 24) / 365
+  );
+  if (mi_edad >= 18 && mi_edad <= 100) return true;
+  return false;
+};
+
+const valnom = () => {
+  let nom = usu.value;
+  if (nom.trim() === "") {
+    return false;
+  }
+  const regex = /^[A-Za-z][A-Za-z0-9]{2,19}$/;
+  return regex.test(nom);
+};
+
+const valmail = () => {
+  let m = corr.value;
+  if (m == "") {
+    return false;
+  }
+  var expReg =
+    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  var eleccorr = expReg.test(m);
+  return eleccorr;
 };
