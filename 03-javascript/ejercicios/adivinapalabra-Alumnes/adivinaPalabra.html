@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <title>ARRRRG-divina</title>
+    <link rel="stylesheet" href="./paraula.css" />
   </head>
 
   <body>
@@ -18,18 +19,22 @@
         <hr id="linea" />
 
         <div class="detalles">
-          <p class="pista">Pista: <span></span></p>
-          <p class="restantes">Intentos restantes: <span></span></p>
-          <p class="letrasErroneas">Letras erroneas: <span></span></p>
+          <p class="pista">Pista: <span id="pista"> </span></p>
+          <p class="restantes">Intentos restantes: <span id="int"></span></p>
+          <p class="letrasErroneas">Letras erroneas: <span id="err"></span></p>
         </div>
         <div class="mostra"></div>
         <div id="boton">
-          <button class="reset-btn">Adivinar Palabra</button>
+          <button class="reset-btn" onclick="jugardenuevo()">
+            Adivinar Palabra
+          </button>
         </div>
       </div>
     </main>
+    <script src="./js/listadoPalabras.js"></script>
 
     <script src="js/listado.js"></script>
-    <script src="js/mensajes.js"></script>
+    <!--     <script src="js/mensajes.js"></script>
+ -->
   </body>
 </html>
