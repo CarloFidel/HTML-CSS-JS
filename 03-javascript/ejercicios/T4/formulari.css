@@ -58,3 +58,13 @@ label {
   font-weight: bold;
   color: rgb(153, 55, 55);
 }
+.bt_mio {
+  color: rgb(47, 39, 39);
+  background-color: rgb(165, 165, 244);
+  border: none;
+}
+.bt_mio:hover {
+  color: rgb(85, 78, 78);
+
+  background-color: rgb(158, 158, 202);
+}
