@@ -6,6 +6,9 @@ const msg = [
   `Enhorabuena! Encontraste la palabra "${palabra.toUpperCase()}".  Un gallifante para ti!!`,
   `Enhorabuena! Encontraste la palabra "${palabra.toUpperCase()}".  Has ganado un chorizo poco chupado`,
 ];
+const ganadorrandom = Math.floor(Math.random() * 6);
+const menganador = msg[ganadorrandom];
+
 const msgError = [
   `Has fallado. La palabra correcta era "${palabra.toUpperCase()}". Esto es demasiado para un... como tú`,
   `Has fallado OTRA VEZ!!!. La palabra correcta era "${palabra.toUpperCase()}". Deberías dedicar tu tiempo a otras cosas`,
@@ -14,3 +17,5 @@ const msgError = [
   `Has fallado por no leer bien la pista, La palabra correcta era "${palabra.toUpperCase()}".... más fácil no puede ser esto!!!`,
   `Has fallado. La palabra correcta era "${palabra.toUpperCase()}".... y resulta que las cosas no son lo que parecen`,
 ];
+const nummensajerandom = Math.floor(Math.random() * 6);
+const men = msgError[nummensajerandom];

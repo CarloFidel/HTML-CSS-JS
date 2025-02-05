@@ -3,7 +3,9 @@ const mostrarpista = document.querySelector("#pista");
 const inputusuario = document.querySelector(".lletra");
 const mostrarintentos = document.querySelector("#int");
 const mostrarletraserroneas = document.querySelector("#err");
-const arrayerroneas = [];
+const mensajefinal = document.querySelector(".detalles");
+let arrayerroneas = [];
+let vidasrestantes;
 
 function crearinputs() {
   inputusuario.focus();
@@ -11,7 +13,6 @@ function crearinputs() {
   for (let i = 0; i < arrayrandom.length; i++) {
     const inp = document.createElement("input");
     contenedor.appendChild(inp);
-    console.log("funciona");
   }
   if (arrayrandom.length > 8) {
     int = 8;
@@ -37,14 +38,34 @@ function reload() {
 volverajugar.onclick = reload;
 
 function comprobarCoincidencia() {
-  const inpus = inputusuario.value;
+  const inpus = inputusuario.value.trim();
   if (arrayrandom.includes(inpus)) {
-    alert("¡Coincidencia encontrada!");
+    console.log("¡Coincidencia encontrada!");
     inputusuario.value = "";
+    const posiciones = [];
+    for (let i = 0; i < arrayrandom.length; i++) {
+      if (arrayrandom[i] === inpus) {
+        posiciones.push(i);
+      }
+      let inparray = document.querySelectorAll(".inputs input");
+      console.log(inparray.length);
+    }
+    console.log(posiciones);
   } else {
-    alert("No hay coincidencias.");
-    const erroneas = inpus;
-    mostrarletraserroneas.innerHTML = erroneas;
+    if (!arrayerroneas.includes(inpus)) {
+      arrayerroneas.push(inpus);
+      mostrarletraserroneas.innerHTML = arrayerroneas.join(", ");
+      let dism = arrayerroneas.length;
+      let disminuyendo = int - dism;
+      mostrarintentos.innerHTML = disminuyendo;
+      if (disminuyendo == 0) {
+        const perdido = `<p class="perdido">${men}<p>`;
+        mensajefinal.innerHTML = perdido;
+      }
+    } else {
+      inputusuario.value = "";
+    }
+
     inputusuario.value = "";
   }
 }

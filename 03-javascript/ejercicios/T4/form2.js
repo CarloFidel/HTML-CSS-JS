@@ -6,7 +6,7 @@ const inputtelefono = document.querySelector("#telefono");
 const inputfecha = document.querySelector("#edad");
 const inputemail = document.querySelector("#mail");
 const inputdni = document.querySelector("#dni");
-const condiciones = document.querySelector("#acepto").checked;
+const condiciones = document.querySelector("#acepto");
 const msm = document.querySelector("#mens");
 
 inputnombre.addEventListener("keyup", () => {
