@@ -59,12 +59,26 @@ label {
   color: rgb(153, 55, 55);
 }
 .bt_mio {
-  color: rgb(47, 39, 39);
-  background-color: rgb(165, 165, 244);
-  border: none;
+  color: rgb(238, 230, 230);
+  background-color: rgb(137, 137, 158);
+  border: 2px solid rgb(124, 123, 123);
+  border-radius: 6px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .bt_mio:hover {
   color: rgb(85, 78, 78);
-
   background-color: rgb(158, 158, 202);
+}
+
+.incorr {
+  border: 2px solid;
+  border-color: brown;
+  transition: border-color 1s ease;
+}
+.corr {
+  border: 2px solid;
+  border-color: rgb(122, 149, 88);
+  transition: border-color 1s ease;
 }

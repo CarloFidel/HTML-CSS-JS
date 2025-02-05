@@ -49,45 +49,65 @@ const validarFormulario = (e) => {
   switch (e.target.id) {
     case "usuario":
       if (exp.nombre.test(e.target.value)) {
+        inputnombre.classList.remove("incorr");
+        inputnombre.classList.add("corr");
         textarea.innerHTML = `<div >Es correcto: ${inputnombre.value}</div>`;
         campos["nombre"] = true;
       } else {
+        inputnombre.classList.remove("corr");
+        inputnombre.classList.add("incorr");
         textarea.innerHTML = `<div class= formulario_incorrecto>ES INCORRECTO: ${inputnombre.value}</div>`;
         campos["nombre"] = false;
       }
       break;
     case "telefono":
       if (exp.telefono.test(e.target.value)) {
+        inputtelefono.classList.remove("incorr");
+        inputtelefono.classList.add("corr");
         textarea.innerHTML = `<div >Es correcto: ${inputtelefono.value}</div>`;
         campos["telefono"] = true;
       } else {
+        inputtelefono.classList.remove("corr");
+        inputtelefono.classList.add("incorr");
         textarea.innerHTML = `<div class= "formulario_incorrecto">ES INCORRECTO: ${inputtelefono.value}</div>`;
         campos["telefono"] = false;
       }
       break;
     case "edad":
       if (edad()) {
+        inputfecha.classList.remove("incorr");
+        inputfecha.classList.add("corr");
         textarea.innerHTML = `<div>Es correcto: ${inputfecha.value}</div>`;
         campos["fecha"] = true;
       } else {
+        inputfecha.classList.remove("corr");
+        inputfecha.classList.add("incorr");
         textarea.innerHTML = `<div class="formulario_incorrecto">ES INCORRECTO: ${inputfecha.value}</div>`;
         campos["fecha"] = false;
       }
       break;
     case "mail":
       if (exp.correo.test(e.target.value)) {
+        inputemail.classList.remove("incorr");
+        inputemail.classList.add("corr");
         textarea.innerHTML = `<dv >Es correcto: ${inputemail.value}</dv>`;
         campos["email"] = true;
       } else {
+        inputemail.classList.remove("corr");
+        inputemail.classList.add("incorr");
         textarea.innerHTML = `<div class= "formulario_incorrecto">ES INCORRECTO: ${inputemail.value}</div>`;
         campos["email"] = false;
       }
       break;
     case "dni":
       if (exp.dni.test(e.target.value)) {
+        inputdni.classList.remove("incorr");
+        inputdni.classList.add("corr");
         textarea.innerHTML = `<div >Es correcto: ${inputdni.value}</div>`;
         campos["dni"] = true;
       } else {
+        inputdni.classList.remove("corr");
+        inputdni.classList.add("incorr");
         textarea.innerHTML = `<div class= "formulario_incorrecto">ES INCORRECTO: ${inputdni.value}</div>`;
         campos["dni"] = false;
       }
