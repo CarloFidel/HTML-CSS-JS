@@ -2,6 +2,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 200px;
+  background-color: rgb(178, 178, 219);
+  background-image: url(./pexels-photo-129731.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .iluminabackground {
@@ -62,14 +67,14 @@ h1 {
 button {
   padding: 10px;
   margin: 8px;
-  background-color: rgb(182, 198, 234);
+  background-color: rgb(178, 205, 149);
   border: 1px solid rgb(192, 109, 109);
   box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
 }
 button:hover {
   cursor: pointer;
-  background-color: rgb(155, 176, 224);
-  transition: background-color 0.6s ease;
+  background-color: rgb(154, 179, 128);
+  transition: background-color 0.4s ease;
   border-color: rgb(170, 108, 108);
 }
 
@@ -129,13 +134,20 @@ button {
   height: 30px;
   width: 30px;
 }
-#accesibilidad {
+.acce {
   display: flex;
-  justify-content: right;
+  text-align: center;
   margin-top: -50px;
   margin-left: 800px;
   gap: 15px;
   opacity: 0.5;
+  border: 1px solid rgb(140, 66, 66);
+  padding-bottom: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: rgb(138, 165, 109);
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
 }
 .restantes {
   margin-top: 20px;
@@ -148,6 +160,7 @@ button {
 }
 /* Accesibilidad */
 .contrastebody {
+  background-image: none;
   background-color: black;
 }
 .contrastemain {
@@ -211,8 +224,21 @@ button {
   justify-content: center;
   height: auto;
   background-color: rgb(255, 255, 255);
-  margin: 10px;
 }
 .textos {
-  color: aliceblue;
+  color: rgb(243, 223, 3);
+}
+.accecontraste {
+  background-color: rgb(243, 215, 4);
+  opacity: 1;
+}
+.botonamarillo {
+  background-color: rgb(243, 215, 4);
+}
+.botonamarillo:hover {
+  background-color: rgb(243, 215, 4);
+}
+
+.x2 {
+  font-size: 2em;
 }

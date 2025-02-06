@@ -10,6 +10,7 @@ let vidasrestantes;
 
 function crearinputs() {
   inputusuario.focus();
+  let corazon = [];
   const contenedor = document.querySelector(".inputs");
   for (let i = 0; i < arrayrandom.length; i++) {
     const inp = document.createElement("input");
@@ -24,6 +25,8 @@ function crearinputs() {
     int = 6;
     mostrarintentos.innerHTML = int;
   }
+  corazon.length = Array.from(int);
+  console.log(corazon.length);
 }
 crearinputs();
 
@@ -97,5 +100,6 @@ function comprobarCoincidencia() {
 
     inputusuario.value = "";
   }
+  document.addEventListener("click", mantenerFoco);
 }
 inputusuario.addEventListener("keyup", comprobarCoincidencia);
