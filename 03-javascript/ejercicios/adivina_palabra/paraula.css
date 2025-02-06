@@ -1,0 +1,218 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding: 200px;
+}
+
+.iluminabackground {
+  background-color: rgb(205, 237, 174);
+  transition: 1;
+  height: 600px;
+  transition: background-color 2s ease;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(164, 192, 135);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  border: 2px solid;
+  border-color: rgb(153, 124, 124);
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+}
+.inputs {
+  display: flex;
+  flex-direction: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+}
+input {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgb(128, 124, 124);
+  border-style: double;
+  box-shadow: 0px 0px 10px rgba(12, 69, 97, 0.5);
+  color: rgb(81, 81, 234);
+  border-color: rgb(102, 134, 208);
+  margin-bottom: 10px;
+  background-color: rgb(223, 228, 239);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+h1 {
+  margin-top: 0px;
+  color: rgb(161, 76, 76);
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline 1px solid;
+}
+.lletra {
+  opacity: 0.001;
+  border: none;
+}
+button {
+  padding: 10px;
+  margin: 8px;
+  background-color: rgb(182, 198, 234);
+  border: 1px solid rgb(192, 109, 109);
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(155, 176, 224);
+  transition: background-color 0.6s ease;
+  border-color: rgb(170, 108, 108);
+}
+
+.perdido {
+  padding: 20px;
+  border: 1px solid rgb(84, 16, 16);
+  background-color: rgb(225, 184, 184);
+  color: rgb(139, 35, 35);
+  width: auto;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+.ganado {
+  padding: 20px;
+  border: 1px solid rgb(83, 111, 222);
+  background-color: rgb(184, 185, 225);
+  color: rgb(28, 11, 124);
+  width: auto;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.detalles {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.reset_btn {
+}
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+}
+/* #boton {
+  border: 1px solid black;
+}
+ */
+.pista {
+  display: flex;
+  flex-direction: column;
+  color: rgb(140, 66, 66);
+  text-align: center;
+  margin-bottom: -2px;
+}
+#linea {
+  color: rgb(193, 120, 120);
+  width: 80%;
+}
+.vidas {
+  margin-right: 3px;
+  margin-top: -6px;
+  height: 30px;
+  width: 30px;
+}
+#accesibilidad {
+  display: flex;
+  justify-content: right;
+  margin-top: -50px;
+  margin-left: 800px;
+  gap: 15px;
+  opacity: 0.5;
+}
+.restantes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.letrasErroneas {
+  color: rgb(140, 66, 66);
+}
+/* Accesibilidad */
+.contrastebody {
+  background-color: black;
+}
+.contrastemain {
+  background-color: rgb(30, 26, 26);
+  border: 2px solid;
+  border-color: rgb(7, 210, 51);
+}
+#btoncontr {
+  margin-top: 14px;
+  width: 22px;
+  height: 22px;
+}
+#btoncontr:hover {
+  cursor: pointer;
+  border: 1px solid color none;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px rgba(12, 69, 97, 0.5);
+}
+.aumentareduce {
+  margin-top: 12px;
+  width: 25px;
+  height: 25px;
+}
+#reduce:hover {
+  cursor: pointer;
+  border: 1px solid color none;
+  border-radius: 10px;
+  box-shadow: 0px 3px 20px rgba(12, 69, 97, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+#reduce {
+  margin-top: 15px;
+  width: 20px;
+  height: 20px;
+}
+#aumenta:hover {
+  cursor: pointer;
+  border: 1px solid color none;
+  border-radius: 20px;
+  box-shadow: 0px 3px 20px rgba(12, 69, 97, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+.inputsaccesibilidad {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgb(7, 7, 7);
+  color: rgb(0, 0, 0);
+  border-color: rgb(21, 94, 7);
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+}
+.inputsacc {
+  display: flex;
+  flex-direction: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+}
+.textos {
+  color: aliceblue;
+}

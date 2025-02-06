@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>ARRRRG-divina</title>
+    <link rel="stylesheet" href="./paraula.css" />
+  </head>
+
+  <body class="cuerpo">
+    <main class="principal">
+      <h1 tabindex="1">ADIVINA PALABRA</h1>
+
+      <div class="content">
+        <input type=" text" class="lletra" maxlength="1" />
+
+        <div class="inputs"></div>
+
+        <hr id="linea" />
+
+        <div class="detalles">
+          <h2 class="pista">Pista:</h2>
+          <p class="pista" style="font-weight: bolder">
+            <span id="pista"> </span>
+          </p>
+
+          <div class="restantes">
+            <img class="vidas" src="./icons8-favorite-50.png" alt="" />
+            <span id="int"></span>
+          </div>
+          <p class="letrasErroneas">Letras erroneas: <span id="err"></span></p>
+        </div>
+        <div class="mostra"></div>
+      </div>
+      <button tabindex="2" class="reset-btn" onclick="jugardenuevo()">
+        Adivinar Palabra
+      </button>
+      <div id="accesibilidad">
+        <img
+          class="contraste"
+          id="btoncontr"
+          src="./icons8-contrast-50.png"
+          alt="button"
+        />
+        <img
+          src="./icons8-add-text-32.png"
+          class="aumentareduce"
+          id="aumenta"
+          alt="button"
+        />
+        <img
+          src="./icons8-decrease-font-24.png"
+          class="aumentareduce"
+          id="reduce"
+          alt="button"
+        />
+      </div>
+    </main>
+    <script src="listadoPalabras.js"></script>
+    <script src="funcionamiento.js"></script>
+    <script src="mensajes.js"></script>
+    <script src="accesibilidad.js"></script>
+  </body>
+</html>
