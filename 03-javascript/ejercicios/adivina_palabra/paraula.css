@@ -49,6 +49,7 @@ input {
   box-shadow: 0px 0px 10px rgba(12, 69, 97, 0.5);
   color: rgb(81, 81, 234);
   border-color: rgb(102, 134, 208);
+  margin-top: -20px;
   margin-bottom: 10px;
   background-color: rgb(223, 228, 239);
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
@@ -61,7 +62,8 @@ h1 {
   text-decoration: underline 1px solid;
 }
 .lletra {
-  opacity: 0.001;
+  /*   opacity: 0.001;
+ */
   border: none;
 }
 button {
@@ -80,21 +82,25 @@ button:hover {
 
 .perdido {
   padding: 20px;
-  border: 1px solid rgb(84, 16, 16);
+  border: 2px solid rgb(174, 87, 87);
   background-color: rgb(225, 184, 184);
   color: rgb(139, 35, 35);
   width: auto;
   margin-left: 250px;
   margin-right: 250px;
+  box-shadow: 0px 1px 10px rgba(35, 28, 28, 0.5);
+  text-shadow: 0px 0px 10px rgba(35, 28, 28, 0.5);
 }
 .ganado {
   padding: 20px;
-  border: 1px solid rgb(83, 111, 222);
+  border: 2px solid rgb(73, 98, 199);
   background-color: rgb(184, 185, 225);
   color: rgb(28, 11, 124);
   width: auto;
   margin-left: 250px;
   margin-right: 250px;
+  box-shadow: 0px 1px 10px rgba(35, 28, 28, 0.5);
+  text-shadow: 0px 0px 10px rgba(35, 28, 28, 0.5);
 }
 
 .detalles {
@@ -106,17 +112,15 @@ button:hover {
 p {
   font-family: Arial, Helvetica, sans-serif;
 }
-.reset_btn {
-}
 button {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   border-radius: 10px;
 }
-/* #boton {
-  border: 1px solid black;
+.adivina {
+  margin-top: 34%;
+  position: absolute;
 }
- */
 .pista {
   display: flex;
   flex-direction: column;
@@ -135,9 +139,10 @@ button {
   width: 30px;
 }
 .acce {
+  position: absolute;
   display: flex;
   text-align: center;
-  margin-top: -50px;
+  margin-top: 34%;
   margin-left: 800px;
   gap: 15px;
   opacity: 0.5;

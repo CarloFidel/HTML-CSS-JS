@@ -17,6 +17,7 @@ const inputacc = continput.children;
 console.log(inputacc);
 
 const cambiacontraste = () => {
+  inputusuario.focus();
   cuerpo.classList.toggle("contrastebody");
   main.classList.toggle("contrastemain");
   acheuno.classList.toggle("textos");
@@ -34,19 +35,15 @@ const cambiacontraste = () => {
   });
 };
 
-const mantenerFoco = (event) => {
-  if (!inputusuario.contains(event.target)) {
-    inputusuario.focus();
-  }
-};
-
 const aumentatexto = () => {
   let tamañopistacc = parseFloat(window.getComputedStyle(pistaacc).fontSize);
-  pistaacc.style.fontSize = tamañopistacc * 1.1 + "px";
+  pistaacc.style.fontSize = tamañopistacc + 3 + "px";
   let tamañoerroneasacc = parseFloat(
     window.getComputedStyle(pistaacc).fontSize
   );
-  erroneasacc.style.fontSize = tamañoerroneasacc * 1.1 + "px";
+  erroneasacc.style.fontSize = tamañoerroneasacc + 2 + "px";
+  let tamañoachedos = parseFloat(window.getComputedStyle(achedos).fontSize);
+  achedos.style.fontSize = tamañoachedos + 2 + "px";
 };
 const disminuyetexto = () => {
   let tamaño = parseFloat(window.getComputedStyle(pistaacc).fontSize);
@@ -54,7 +51,7 @@ const disminuyetexto = () => {
   let tamañoerroneasacc = parseFloat(
     window.getComputedStyle(pistaacc).fontSize
   );
-  erroneasacc.style.fontSize = tamañoerroneasacc * 0.95 + "px";
+  erroneasacc.style.fontSize = tamañoerroneasacc + 2 + "px";
 };
 
 contrast.onclick = cambiacontraste;
