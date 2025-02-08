@@ -47,7 +47,7 @@ const aumentatexto = () => {
 };
 const disminuyetexto = () => {
   let tamaño = parseFloat(window.getComputedStyle(pistaacc).fontSize);
-  pistaacc.style.fontSize = tamaño * 0.9 + "px";
+  pistaacc.style.fontSize = tamaño - 3 + "px";
   let tamañoerroneasacc = parseFloat(
     window.getComputedStyle(pistaacc).fontSize
   );

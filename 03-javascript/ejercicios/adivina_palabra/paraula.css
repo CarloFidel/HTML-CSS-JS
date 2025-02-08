@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 200px;
   background-color: rgb(178, 178, 219);
@@ -62,8 +63,7 @@ h1 {
   text-decoration: underline 1px solid;
 }
 .lletra {
-  /*   opacity: 0.001;
- */
+  opacity: 0.001;
   border: none;
 }
 button {
@@ -118,8 +118,7 @@ button {
   border-radius: 10px;
 }
 .adivina {
-  margin-top: 34%;
-  position: absolute;
+  margin-top: 30px;
 }
 .pista {
   display: flex;
@@ -139,11 +138,12 @@ button {
   width: 30px;
 }
 .acce {
-  position: absolute;
+  height: 35px;
   display: flex;
   text-align: center;
-  margin-top: 34%;
-  margin-left: 800px;
+  margin-top: -3%;
+  margin-left: 90%;
+  margin-right: 30%;
   gap: 15px;
   opacity: 0.5;
   border: 1px solid rgb(140, 66, 66);
@@ -180,9 +180,6 @@ button {
 }
 #btoncontr:hover {
   cursor: pointer;
-  border: 1px solid color none;
-  border-radius: 50px;
-  box-shadow: 0px 0px 10px rgba(12, 69, 97, 0.5);
 }
 .aumentareduce {
   margin-top: 12px;
@@ -191,10 +188,6 @@ button {
 }
 #reduce:hover {
   cursor: pointer;
-  border: 1px solid color none;
-  border-radius: 10px;
-  box-shadow: 0px 3px 20px rgba(12, 69, 97, 0.5);
-  transition: box-shadow 0.3s ease;
 }
 #reduce {
   margin-top: 15px;
@@ -203,10 +196,6 @@ button {
 }
 #aumenta:hover {
   cursor: pointer;
-  border: 1px solid color none;
-  border-radius: 20px;
-  box-shadow: 0px 3px 20px rgba(12, 69, 97, 0.5);
-  transition: box-shadow 0.3s ease;
 }
 .inputsaccesibilidad {
   display: flex;

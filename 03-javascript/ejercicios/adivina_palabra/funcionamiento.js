@@ -81,7 +81,8 @@ function comprobarCoincidencia() {
       mostrarletraserroneas.innerHTML = arrayerroneas.join(", ").toUpperCase();
       let dism = arrayerroneas.length;
       let disminuyendo = int - dism;
-      corazonarray.pop(4);
+      let corazoneliminado = corazonarray.pop();
+      contvidas.removeChild(corazoneliminado);
 
       if (disminuyendo == 0) {
         const perdido = `<p class="perdido">${men}<p>`;
@@ -93,6 +94,7 @@ function comprobarCoincidencia() {
 
     inputusuario.value = "";
   }
+  inputusuario.value = "";
   document.addEventListener("click", mantenerFoco);
 }
 inputusuario.addEventListener("keyup", comprobarCoincidencia);
