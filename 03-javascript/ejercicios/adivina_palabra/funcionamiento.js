@@ -131,7 +131,9 @@ start.onclick = () => {
     } else {
       if (!arrayerroneas.includes(inpus)) {
         arrayerroneas.push(inpus);
-        mostrarletraserroneas.innerHTML = arrayerroneas.join(",").toUpperCase();
+        mostrarletraserroneas.innerHTML = arrayerroneas;
+        arrayerroneas = arrayerroneas.filter((item) => item.trim() !== "");
+        console.log(arrayerroneas);
         mostrarletraserroneas.classList.add("letrasmal");
 
         let dism = arrayerroneas.length;
