@@ -8,7 +8,7 @@ const divdetalles = document.querySelector(".detalles");
 const erroneasacc = document.querySelector(".letrasErroneas");
 const pistaacc = document.querySelector("#pista");
 const divacc = document.querySelector(".acce");
-const botacc = document.querySelector(".reset-btn");
+const botacc = document.querySelector(".volverjugar");
 const aumentar = document.querySelector("#aumenta");
 const reduce = document.querySelector("#reduce");
 
@@ -30,7 +30,6 @@ const cambiacontraste = () => {
 
   Array.from(inputacc).forEach((input) => {
     input.classList.toggle("inputsaccesibilidad");
-    input.classList.remove(".inputs");
     input.classList.toggle("inputsacc");
   });
 };

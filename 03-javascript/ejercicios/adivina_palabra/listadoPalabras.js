@@ -76,11 +76,8 @@ const listado = [
     pista: "Su precio está por las nubes",
   },
 ];
-const numerorandom = Math.floor(Math.random() * 19);
-const par = listado[numerorandom];
-const palabra = par.palabra;
-console.log(palabra);
-const pista = par.pista;
-console.log(pista);
+let pista, palabra, arrayrandom, numerorandom;
 
-const arrayrandom = palabra.split("");
+const azar = () => {
+  numerorandom = Math.floor(Math.random() * 19);
+};
