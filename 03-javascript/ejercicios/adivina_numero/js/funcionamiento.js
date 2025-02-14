@@ -25,6 +25,7 @@ const funcionamiento = () => {
   containerNumeros.innerHTML = enunciado;
   containerNumeros.appendChild(inputprimernumero);
   const botonprimernumero = document.createElement("button");
+  botonprimernumero.innerHTML = "Continuar";
   containerNumeros.appendChild(botonprimernumero);
   const primernumero = document.querySelector(".inputprimero");
 
@@ -44,6 +45,8 @@ const funcionamiento = () => {
     inputsegundonumero.classList.add("inputsegundo");
     containersegNumero.appendChild(inputsegundonumero);
     const botonsegundonumero = document.createElement("button");
+    botonsegundonumero.innerHTML = "Continuar";
+
     botonsegundonumero.classList.add("botonsegundo");
     containersegNumero.appendChild(botonsegundonumero);
     const botonseg = document.querySelector(".botonsegundo");
@@ -66,9 +69,10 @@ const funcionamiento = () => {
         const enunciadobotones = `${nombre.value}, tus números son el ${valorprimero} y el ${valorsegundo}. Adivina el número dentro de ese rango que el juego ha pensado de manera aleatoria. Este es tu intento 1 de 5 `;
         containerbotones.innerHTML = enunciadobotones;
 
-        for (let i = valorprimero; i < valorsegundo; i++) {
+        for (let i = valorprimero; i <= valorsegundo; i++) {
           const botonesjugador = document.createElement("button");
           botonesjugador.classList.add("botonescreados");
+          botonesjugador.innerHTML = [i];
           containerbotones.appendChild(botonesjugador);
           console.log(botonesjugador);
         }
