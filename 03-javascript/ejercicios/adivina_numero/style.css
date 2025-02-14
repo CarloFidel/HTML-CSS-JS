@@ -2,13 +2,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 100px;
   text-align: center;
 }
 h1 {
-  border: 1px solid black;
+  border: 1px solid rgb(169, 165, 165);
   background-color: rgb(228, 202, 154);
-  padding: 5px;
+  padding: 20px;
 }
 #divNombre {
   display: flex;
@@ -25,12 +26,16 @@ input {
   border: 1px solid rgb(172, 167, 167);
   border-radius: 10px;
 }
-
+input:focus {
+  border: none; /* Elimina el borde */
+  outline: solid 2px rgb(202, 200, 200); /* Elimina el borde de enfoque */
+}
 main {
   border: 1px solid black;
   padding: 30px;
   height: 400px;
   background-color: rgb(229, 215, 190);
+  width: 70%;
 }
 button {
   height: 40px;
