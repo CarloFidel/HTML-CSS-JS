@@ -5,18 +5,23 @@ body {
   align-items: center;
   padding: 100px;
   text-align: center;
+  background-color: rgb(220, 243, 220);
 }
 h1 {
-  border: 1px solid rgb(169, 165, 165);
-  background-color: rgb(228, 202, 154);
+  border: 1px solid rgb(100, 113, 194);
+  background-color: rgb(171, 190, 241);
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
 }
 #divNombre {
-  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
   flex-direction: column;
+  text-align: left;
   gap: 10px;
-  margin-top: 100px;
-  border: 1px solid #8e8c8c;
+  margin-top: 10px;
+  border: solid 1px rgb(75, 116, 60);
   border-radius: 5px;
   padding: 30px;
 }
@@ -25,22 +30,47 @@ input {
   padding: 10px;
   border: 1px solid rgb(172, 167, 167);
   border-radius: 10px;
+  width: 200px;
 }
 input:focus {
-  border: none; /* Elimina el borde */
-  outline: solid 2px rgb(202, 200, 200); /* Elimina el borde de enfoque */
+  border: none;
+  outline: solid 1px rgb(202, 200, 200);
 }
 main {
-  border: 1px solid black;
+  border: 1px solid #8e8c8c;
   padding: 30px;
-  height: 400px;
-  background-color: rgb(229, 215, 190);
-  width: 70%;
+  height: 10%;
+  background-color: rgb(171, 190, 241);
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+}
+.botonescreados {
+  height: 40px;
+  width: 80px;
+  margin: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(122, 163, 125);
+  font-size: 20px;
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+  border: solid 1px rgb(75, 116, 60);
+}
+.botonescreados:hover {
+  cursor: crosshair;
 }
 button {
   height: 40px;
   width: 80px;
-  margin: 20px;
+  background-color: rgb(134, 173, 224);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 10px;
+  border: solid 1px rgb(107, 132, 231);
+  border-radius: 10px;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
 }
 .incorrecto {
   border: 3px solid rgb(128, 51, 51);
@@ -48,19 +78,137 @@ button {
 #divNombre {
   display: flex;
   flex-direction: column;
-  background-color: rgb(184, 228, 154);
+  background-color: rgb(153, 195, 156);
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+  border: solid 1px rgb(75, 116, 60);
 }
 
 #divNumero {
-  border: 1px solid black;
+  border: solid 1px rgb(75, 116, 60);
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(151, 192, 154);
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
 }
 
-button {
-  background-color: rgb(108, 189, 108);
-}
 h1 {
   font-family: Arial, Helvetica, sans-serif;
+}
+#segundonumero {
+  border: solid 1px rgb(75, 116, 60);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(151, 192, 154);
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#enunciadobotones {
+  display: flex;
+  text-align: left;
+}
+#botonesjugador {
+  margin-top: 20px;
+}
+.inputnombrerror {
+  border: 1px solid rgb(218, 141, 141);
+}
+.errornombre {
+  color: rgb(134, 54, 54);
+}
+#enunciadobotones {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+#botonesjugador {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  background-color: rgb(155, 213, 161);
+  padding: 20px;
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+  border-radius: 10px;
+}
+.tuprimernumero {
+  color: rgb(53, 102, 147);
+}
+.muestrasegundo {
+  color: rgb(53, 102, 147);
+}
+.msmfelicidades {
+  padding: 20px;
+  border: solid 2px rgb(84, 102, 170);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+}
+.enunciadonum {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+}
+.inputcorrecto {
+  border: 1px solid green;
+}
+.volver {
+  padding: 10px;
+}
+.acce {
+  height: 35px;
+  display: flex;
+  text-align: center;
+  margin-top: -6%;
+  margin-left: 90%;
+  margin-right: 30%;
+  margin-bottom: 50px;
+  gap: 15px;
+  opacity: 0.8;
+  border: solid 1px rgb(84, 102, 170);
+  padding-bottom: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: rgb(138, 165, 109);
+  box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
+  width: 100px;
+}
+#reduce:hover {
+  cursor: pointer;
+}
+#reduce {
+  margin-top: 15px;
+  width: 20px;
+  height: 20px;
+}
+#aumenta:hover {
+  cursor: pointer;
+}
+#btoncontr {
+  margin-top: 14px;
+  width: 22px;
+  height: 22px;
+}
+.aumentareduce {
+  margin-top: 12px;
+  width: 25px;
+  height: 25px;
+}
+#btoncontr:hover {
+  cursor: pointer;
+}
+.contrastebody {
+  background-color: rgb(246, 246, 246);
+}
+.mainwhite {
+  background-color: rgb(4, 4, 4);
+}
+.divnumacc {
+  background-color: white;
+  border: rgb(5, 53, 5);
+  border: solid 20px;
 }
