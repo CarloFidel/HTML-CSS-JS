@@ -24,11 +24,12 @@ export function mostrarDatos(nombre, ahorro) {
 
 export class Cliente {
   constructor(nombre, ahorro) {
+    //el metodo constructor construye objetos. Es un metodo ya predefinido
     this.nombre = nombre;
     this.ahorro = ahorro;
   }
 
   mostrarDatos() {
-    return `Impresion en consola del Cliente: ${this.nombre} - Ahorro: ${this.ahorro}`;
+    return `Impresion en consola del Cliente: ${this.nombre} y su Ahorro: ${this.ahorro}`;
   }
 }

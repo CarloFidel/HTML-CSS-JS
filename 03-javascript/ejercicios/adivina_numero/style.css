@@ -80,7 +80,7 @@ button:hover {
   flex-direction: column;
   background-color: rgb(153, 195, 156);
   box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
-  height: 70px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 6px 4px 10px rgba(35, 28, 28, 0.5);
   border: solid 1px rgb(75, 116, 60);

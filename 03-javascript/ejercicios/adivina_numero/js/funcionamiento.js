@@ -15,6 +15,10 @@ containerNumeros.style.display = "none";
 containersegNumero.style.display = "none";
 
 const validarnombre = () => {
+  const revnomb = document.querySelector(".errornombre");
+  if (revnomb) {
+    revnomb.remove();
+  }
   if (valnombre.test(nombre.value)) {
     funcionamiento();
   } else {
