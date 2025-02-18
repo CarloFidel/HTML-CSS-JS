@@ -1,11 +1,11 @@
 export const nombreCliente = "Juan";
 export let ahorro = 200;
 
-//Los IFE son funcionen que se ejecutan inmediatamente que on leidas....
+//Los IFE son funciones que se ejecutan inmediatamente que on leidas....
 //Esta forma evita que las variables definidas en este archivo se puedan mezclar con las de otro archivo....su sintaxis es:
 /* (function () {
- */ /*  const nombreCliente = "Juan"; */
-/*   let ahorro = 200;
+  const nombreCliente = "Juan"; 
+  let ahorro = 200;
  */ //Evitamos que este código se mezcle con otras variables, el problema es que encapsula el código, para hacerlo accesible desde otros archivos debemos elevar el ambito de ese codigo al window del navegador
 /*   window.nombreCliente = "Juan";
  */ /* })();

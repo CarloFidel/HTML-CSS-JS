@@ -1,7 +1,7 @@
-const btn1 = document.querySelector("#btn1");
-const mostra = document.querySelector("#mostra");
+export const btn1 = document.querySelector("#btn1");
+export const mostra = document.querySelector("#mostra");
 
-const obtenertexto = () => {
+export const obtenertexto = () => {
   fetch("./server/data.txt")
     .then((response) => {
       console.log(response);

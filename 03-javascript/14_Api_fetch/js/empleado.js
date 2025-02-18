@@ -1,4 +1,4 @@
-const btn2 = document.querySelector("#btn2");
+export const btn2 = document.querySelector("#btn2");
 /* const mostra = document.querySelector("#contenido");
  */
 const mostrarHTML = (resultado) => {
@@ -19,6 +19,7 @@ const obtenerDatos = () => {
       console.log(response.status);
       console.log(response.statusText);
       console.log(response.url);
+      if (!response.ok) throw new Error("esto es un rerroren solicitud");
       return response.json();
     })
     .then((response) => {
