@@ -293,13 +293,13 @@ const apagar = () => {
   div210.style.display = "block";
 };
 ////////////Variante 1////////////
-/* div210.addEventListener("mouseover", encender);
+div210.addEventListener("mouseover", encender);
 div10.addEventListener("mouseout", apagar);
- */
-////////////Variante 2////////////
-div210.addEventListener("dblclick", encender);
-div10.addEventListener("click", apagar);
 
+////////////Variante 2////////////
+/* div210.addEventListener("dblclick", encender);
+div10.addEventListener("click", apagar);
+ */
 ////////////Variante 3////////////
 /* enc10.style.display = "block";
 apg10.style.display = "block";

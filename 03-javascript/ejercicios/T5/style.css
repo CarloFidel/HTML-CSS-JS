@@ -1,0 +1,119 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: sticky;
+}
+main {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 700px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#conteiner {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+  margin: 10%;
+  padding: 80px;
+  border: 1px solid rgb(169, 167, 167);
+  border-radius: 10px;
+  text-align: left;
+  gap: 20px;
+  background-color: rgb(191, 188, 188, 0.6);
+}
+#divtitle {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: -40px;
+}
+#conteiner input {
+  width: 440px;
+}
+#conteiner select {
+  width: 440px;
+}
+#conteiner button {
+  width: 200px;
+}
+
+#mostra {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid rgb(65, 64, 64);
+  border-radius: 10px;
+  background-color: rgb(92, 91, 91, 0.9);
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 1px 7px 10px 3px rgb(42, 42, 43);
+  font-weight: bold;
+}
+
+#contrast {
+  margin-top: 5px;
+  width: 23px;
+}
+#contrast:hover {
+  cursor: pointer;
+}
+#moretext {
+  width: 30px;
+}
+#moretext:hover {
+  cursor: pointer;
+}
+#lesstext {
+  margin-top: 3px;
+  width: 20px;
+  height: 25px;
+}
+
+#lesstext:hover {
+  cursor: pointer;
+}
+#acc {
+  margin-top: 1px;
+  border: 1px solid rgb(173, 170, 170, 0.2);
+  border-radius: 10px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  gap: 14px;
+  box-shadow: 1px 7px 10px 3px rgb(42, 42, 43);
+  background-color: rgba(248, 248, 255, 0.4);
+}
+button {
+  border: none;
+  width: 170px;
+  padding: 10px;
+}
+/* Accesibilidad */
+.acc_body {
+  background-image: none; /* Elimina la imagen de fondo */
+  background-color: black; /* Establece el fondo a negro */
+}
+.acc_conteiner {
+  background-color: white;
+  border: 3px solid green;
+}
+.acc_button {
+  background-color: yellow;
+  border: 3px solid black;
+  color: rgb(0, 0, 0);
+}
+.acc_button:hover {
+  background-color: yellow;
+  border: 3px solid black;
+  color: rgb(0, 0, 0);
+}
+.acc_input {
+  border: 2px solid black;
+}
