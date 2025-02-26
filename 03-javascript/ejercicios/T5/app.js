@@ -35,6 +35,7 @@ const obtenerfoto = () => {
 };
 window.onload = () => {
   obtenerfoto();
+  paiselect.focus();
   paiselect.value = "";
 };
 const temperatura = (data) => {
@@ -88,4 +89,11 @@ const obtentemperatura = () => {
       console.log("Error al cargar temperatura", error);
     });
 };
+inputCiudad.addEventListener("focus", () => {
+  window.addEventListener("keyup", (event) => {
+    if (event.key == "Enter") {
+      valida();
+    }
+  });
+});
 cargatemp.addEventListener("click", valida);

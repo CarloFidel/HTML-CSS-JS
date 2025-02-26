@@ -13,34 +13,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="acc">
-      <img id="moretext" src="icons8-add-text-32.png" alt="button" />
-      <img id="lesstext" src="icons8-decrease-font-24.png" alt="button" />
-      <img id="contrast" src="icons8-contrast-50.png" alt="button" />
-    </div>
     <main>
-      <div class="container-fluid" id="conteiner">
-        <div tabindex="1" id="divtitle"><h1>Temperatura actual</h1></div>
+      <div
+        tabindex="1"
+        aria-label="Contenedor de botones para accesibilidad"
+        id="acc"
+      >
+        <img id="moretext" src="icons8-add-text-32.png" alt="button" />
+        <img id="lesstext" src="icons8-decrease-font-24.png" alt="button" />
+        <img id="contrast" src="icons8-contrast-50.png" alt="button" />
+      </div>
 
-        <label for="name">Seleccione un país</label>
-        <select tabindex="2" class="form-select" name="" id="seleccpais">
+      <div class="container-fluid" id="conteiner">
+        <div tabindex="2" id="divtitle"><h1>Temperatura actual</h1></div>
+
+        <label id="leb" for="name">Seleccione un país</label>
+        <select tabindex="3" class="form-select" name="" id="seleccpais">
           <option value="">--Seleccione--</option>
           <option value="ESP">España</option>
           <option value="CUB">Cuba</option>
           <option value="FRA">Francia</option>
         </select>
-        <label for="name">Escriba una ciudad</label>
+        <label id="lebdos" for="name">Escriba una ciudad</label>
         <input
-          tabindex="3"
+          tabindex="4"
           class="form-control"
           id="elige_ciudad"
           type="text"
         />
-        <button tabindex="4" class="btn btn-primary" id="btn_temp">
+        <button
+          tabindex="5"
+          class="btn btn-primary"
+          id="btn_temp"
+          role="button"
+        >
           Mostrar temperatura
         </button>
-        <div id="errcontainer" class="alert alert-danger"></div>
-        <div class="container-md" id="mostra">
+        <div id="errcontainer" role="alert" class="alert alert-danger"></div>
+        <div tabindex="5" class="container-md" id="mostra">
           <p id="tmpmax"></p>
           <p id="tmpmin"></p>
           <p id="actual"></p>
