@@ -3,10 +3,10 @@ const disminuyetexto = document.querySelector("#lesstext");
 const contraste = document.querySelector("#contrast");
 const accconteiner = document.querySelector("#conteiner");
 const acch1 = document.querySelector("#divtitle");
+const elh1 = document.querySelector("#tit");
 const accsect = document.querySelector("#acc");
 const lebeluno = document.querySelector("#leb");
 const lebeldos = document.querySelector("#lebdos");
-
 let tam = 1;
 
 const contras = () => {
@@ -25,7 +25,6 @@ const textoaumenta = () => {
   let untamaño = 18 + tam;
   lebeluno.style.fontSize = `${untamaño}px`;
   lebeldos.style.fontSize = `${untamaño}px`;
-  acch1.style.fontSize = `${untamaño}px`;
   if (untamaño > 30) {
     aumentatexto.removeEventListener("click", textoaumenta);
   }
@@ -38,7 +37,6 @@ const textodisminuye = () => {
   let untamaño = 18 + tam;
   lebeluno.style.fontSize = `${untamaño}px`;
   lebeldos.style.fontSize = `${untamaño}px`;
-  acch1.style.fontSize = `${untamaño}px`;
   if (untamaño < 20) {
     disminuyetexto.removeEventListener("click", textodisminuye);
   }
@@ -46,7 +44,6 @@ const textodisminuye = () => {
     aumentatexto.addEventListener("click", textoaumenta);
   }
 };
-
 contraste.addEventListener("click", contras);
 aumentatexto.addEventListener("click", textoaumenta);
 disminuyetexto.addEventListener("click", textodisminuye);

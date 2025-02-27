@@ -24,8 +24,14 @@
         <img id="contrast" src="icons8-contrast-50.png" alt="button" />
       </div>
 
-      <div class="container-fluid" id="conteiner">
-        <div tabindex="2" id="divtitle"><h1>Temperatura actual</h1></div>
+      <div
+        class="container-fluid"
+        id="conteiner"
+        aria-label="Contenedor de inputs y botones"
+      >
+        <div tabindex="2" id="divtitle">
+          <h1 id="tit">Temperatura actual</h1>
+        </div>
 
         <label id="leb" for="name">Seleccione un país</label>
         <select tabindex="3" class="form-select" name="" id="seleccpais">
@@ -49,8 +55,18 @@
         >
           Mostrar temperatura
         </button>
-        <div id="errcontainer" role="alert" class="alert alert-danger"></div>
-        <div tabindex="5" class="container-md" id="mostra">
+        <div
+          id="errcontainer"
+          role="alert"
+          class="alert alert-danger"
+          aria-label="Muestra el error al cargar la temperatura"
+        ></div>
+        <div
+          tabindex="5"
+          class="container-md"
+          id="mostra"
+          aria-label="Muestra el la temperatura cargada"
+        >
           <p id="tmpmax"></p>
           <p id="tmpmin"></p>
           <p id="actual"></p>
