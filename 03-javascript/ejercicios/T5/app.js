@@ -96,4 +96,5 @@ inputCiudad.addEventListener("focus", () => {
     }
   });
 });
+
 cargatemp.addEventListener("click", valida);

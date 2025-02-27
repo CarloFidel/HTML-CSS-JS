@@ -25,7 +25,11 @@ const textoaumenta = () => {
   let untamaño = 18 + tam;
   lebeluno.style.fontSize = `${untamaño}px`;
   lebeldos.style.fontSize = `${untamaño}px`;
-  if (untamaño > 30) {
+  maxconteiner.style.fontSize = `${untamaño - 3.5}px`;
+  minconteiner.style.fontSize = `${untamaño - 3.5}px`;
+  actconteiner.style.fontSize = `${untamaño - 3.5}px`;
+
+  if (untamaño > 25) {
     aumentatexto.removeEventListener("click", textoaumenta);
   }
   if (untamaño > 20) {
@@ -37,6 +41,10 @@ const textodisminuye = () => {
   let untamaño = 18 + tam;
   lebeluno.style.fontSize = `${untamaño}px`;
   lebeldos.style.fontSize = `${untamaño}px`;
+  maxconteiner.style.fontSize = `${untamaño - 3}px`;
+  minconteiner.style.fontSize = `${untamaño - 3}px`;
+  actconteiner.style.fontSize = `${untamaño - 3}px`;
+
   if (untamaño < 20) {
     disminuyetexto.removeEventListener("click", textodisminuye);
   }
